@@ -31,9 +31,16 @@ class Extractor:
         import json
         json_output = {}
         for type, mapping in types.items():
-            json_output[type.name] = {proto.name: proto_id for proto_id, proto in mapping.items()}
+            json_output[type.name] = {proto_id: json.loads(proto.json) for proto_id, proto in mapping.items()}
         with open("prototypes.json", "w") as jf:
             json.dump(json_output, jf, indent=2)
+
+        # Print raw JSON of each prototype to stdout
+        for t, mapping in types.items():
+            print(f"## {t.name}")
+            for proto_id, proto in sorted(mapping.items(), key=lambda x: x[1].name):
+                print(f"-- {proto.name}: {proto_id}")
+                print(proto.json)
 
         uw_game.log_info("extraction done")
 

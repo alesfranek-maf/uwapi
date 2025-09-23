@@ -3,8 +3,12 @@ import time
 from uwapi import *
 import json
 
-with open("bots/prototypes.json") as f:
+with open("bot/prototypes.json") as f:
     PROTOTYPES = json.load(f)
+for top_key in PROTOTYPES:
+    PROTOTYPES[top_key] = {int(k): v for k, v in PROTOTYPES[top_key].items()}
+
+# dps > 0, fireRange < 5 <- combat units
 
 class Bot:
     is_configured: bool = False
@@ -66,7 +70,8 @@ class Bot:
         uw_game.player_join_force(0)  # create new force
         uw_game.set_force_color(1, 0, 0)
         # uw_game.set_force_race(RACE_ID) # todo
-        uw_game.set_force_race(PROTOTYPES["Race"]["technocracy"])
+        tech_id = next(k for k, v in PROTOTYPES["Race"].items() if v["name"] == "technocracy")
+        uw_game.set_force_race(tech_id)
         if uw_world.is_admin():
             # uw_admin.set_map_selection("planets/tetrahedron.uwmap")
             uw_admin.set_map_selection("special/risk.uwmap")

@@ -1,284 +1,7425 @@
 {
   "Unit": {
-    "star bush": 2162401397,
-    "rock 8": 2171283140,
-    "mermaid": 2181255771,
-    "refinery": 2183816954,
-    "juggernaut": 2187484756,
-    "nutritree": 2200865023,
-    "rock 15": 2230393110,
-    "rock 3": 2234672701,
-    "lamp tower": 2242352405,
-    "capacitor": 2243472010,
-    "nanoforge": 2260731219,
-    "rock 9": 2299464343,
-    "wall": 2311675106,
-    "rock 21": 2327214785,
-    "slug": 2358554770,
-    "crysthide": 2368457160,
-    "toxiloon": 2371247863,
-    "lasher": 2390715978,
-    "fabricator": 2474674963,
-    "greek column bush": 2476391876,
-    "yatag": 2493537238,
-    "big boom boy": 2513140713,
-    "aether deposit": 2535003968,
-    "hound": 2540238849,
-    "anchor spikes": 2591834996,
-    "stingray": 2595193030,
-    "flagpole tree": 2635045743,
-    "tallmouth tree": 2645485493,
-    "rock 16": 2650889579,
-    "azure helicup tree": 2662204315,
-    "metal deposit": 2702889254,
-    "cyclops": 2716577361,
-    "jamcollar tree": 2732229024,
-    "lurker": 2752190703,
-    "drone": 2762638410,
-    "pipeshroom": 2827848058,
-    "excavator": 2867524795,
-    "landmine": 2872270872,
-    "axolotl tank": 2877603597,
-    "drill": 2910644843,
-    "heimdall": 2919412120,
-    "indigo chalix bush": 2926372489,
-    "deeproot": 2937515305,
-    "bagpipes tree": 2938392654,
-    "pyramid tree": 2975159631,
-    "rock 6": 2982432878,
-    "rock 10": 2986435653,
-    "dart trap": 2998004020,
-    "rock 11": 3013219346,
-    "kitsune": 3031814565,
-    "ATV": 3039831041,
-    "rock 22": 3102111872,
-    "paladin": 3111021103,
-    "bots factory": 3126591205,
-    "starsky tree": 3130129556,
-    "spring fruit tree": 3150619395,
-    "heating tower": 3179704639,
-    "rock 5": 3203286691,
-    "jumpscare": 3216211863,
-    "rock 1": 3261759087,
-    "brightstripe bush": 3270972006,
-    "incubator": 3273942786,
-    "warlord": 3315790777,
-    "air factory": 3318920759,
-    "slitherer": 3345781597,
-    "cagefruit bush": 3349165467,
-    "smelter": 3360801550,
-    "rock 7": 3366566657,
-    "billboard 3": 3375048674,
-    "cup fruit tree": 3382372732,
-    "thor": 3387207155,
-    "billboard 2": 3390419093,
-    "rhino": 3433219053,
-    "rock 2": 3436909866,
-    "gorescythe": 3438207242,
-    "generator": 3461838831,
-    "rock 14": 3462184041,
-    "hairytwig": 3473530076,
-    "helix tree": 3490146831,
-    "sunbeam": 3498655354,
-    "dart bush": 3500346962,
-    "phytomorph": 3508557995,
-    "violet bush": 3515278880,
-    "billboard 1": 3521432948,
-    "rock 4": 3524129216,
-    "rock 17": 3535896808,
-    "twinfire": 3539165854,
-    "trifeather tree": 3548724939,
-    "windmill bush": 3555433829,
-    "bifolia bush": 3584623701,
-    "laboratory": 3612099239,
-    "spiral trunk tree": 3659091907,
-    "wardkin": 3661861099,
-    "rock 13": 3680778852,
-    "rock 12": 3684067127,
-    "venomite": 3690332618,
-    "overlord": 3692648848,
-    "twisted trunk tree": 3710682310,
-    "claws stump": 3713271430,
-    "rock 18": 3722995037,
-    "talos": 3774904817,
-    "tripod": 3778674520,
-    "mutapod": 3782433053,
-    "cilia bush": 3790508815,
-    "vehicle factory": 3797798415,
-    "rock 24": 3802607850,
-    "control core": 3805195479,
-    "experimental assembler": 3895194009,
-    "barebark bush": 3916914827,
-    "spike wall": 3926051584,
-    "cartographer tree": 3932576529,
-    "potato bush": 3939081576,
-    "anchor bulb": 3941348424,
-    "rock 20": 3965671726,
-    "chimney tree": 3974058854,
-    "lotus": 3976181794,
-    "oil deposit": 3984569945,
-    "maggot": 3996180294,
-    "blazepup": 4054188688,
-    "broadleaf bush": 4142535605,
-    "glow bulb stump": 4159224483,
-    "rock 23": 4186525539,
-    "pincer tree": 4200273006,
-    "rock 19": 4204074954,
-    "platform": 4223266838,
-    "golem": 4233696204,
-    "gas trap": 4248688114,
-    "pearltwig": 4252647795,
-    "cooling tower 1": 4256420274,
-    "cooling tower 2": 4284848983,
-    "mechlas": 4286467124
+    "2162401397": {
+      "id": 2162401397,
+      "name": "star bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "2171283140": {
+      "id": 2171283140,
+      "name": "rock 8",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2181255771": {
+      "id": 2181255771,
+      "name": "mermaid",
+      "type": 4,
+      "tags": [
+        0,
+        10
+      ],
+      "tagsNames": [
+        "ambush",
+        "artillery"
+      ],
+      "recipes": [],
+      "upgrades": [
+        4027004013
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 4,
+      "damageTypeName": "explosive",
+      "dps": 0.72,
+      "dpsAtLowLife": 0.36,
+      "fireRange": 150,
+      "rateOfFire": 0.5,
+      "shooterElevation": 1.0471976,
+      "targetElevation": 0.34906587,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 20,
+        "1": 20,
+        "2": 20,
+        "4": 20
+      }
+    },
+    "2183816954": {
+      "id": 2183816954,
+      "name": "refinery",
+      "type": 4,
+      "tags": [],
+      "tagsNames": [],
+      "recipes": [
+        3517532115
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "2187484756": {
+      "id": 2187484756,
+      "name": "juggernaut",
+      "type": 4,
+      "tags": [
+        9
+      ],
+      "tagsNames": [
+        "assault"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3459078104
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 3.82,
+      "dpsAtLowLife": 1.91,
+      "fireRange": 60,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 30
+      }
+    },
+    "2200865023": {
+      "id": 2200865023,
+      "name": "nutritree",
+      "type": 4,
+      "tags": [
+        12
+      ],
+      "tagsNames": [
+        "miner"
+      ],
+      "recipes": [
+        3264532017
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2230393110": {
+      "id": 2230393110,
+      "name": "rock 15",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2234672701": {
+      "id": 2234672701,
+      "name": "rock 3",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2242352405": {
+      "id": 2242352405,
+      "name": "lamp tower",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "buildingRadius": 5
+    },
+    "2243472010": {
+      "id": 2243472010,
+      "name": "capacitor",
+      "type": 4,
+      "tags": [
+        11,
+        18,
+        20
+      ],
+      "tagsNames": [
+        "noncombat",
+        "research",
+        "volatile"
+      ],
+      "recipes": [
+        3559478118
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": true,
+      "explodesWhenSelfDestructed": true,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 20,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "explosionDamageType": 5,
+      "explosionDamageTypeName": "antimatter",
+      "explosionDamage": 10,
+      "explosionRadius": 35,
+      "explosionFractionAtEdge": 0.7,
+      "explosionFractionToFriendly": 1,
+      "buildingRadius": 15
+    },
+    "2260731219": {
+      "id": 2260731219,
+      "name": "nanoforge",
+      "type": 4,
+      "tags": [],
+      "tagsNames": [],
+      "recipes": [
+        2397420686,
+        3435470674
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "2299464343": {
+      "id": 2299464343,
+      "name": "rock 9",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 7
+    },
+    "2311675106": {
+      "id": 2311675106,
+      "name": "wall",
+      "type": 4,
+      "tags": [
+        21
+      ],
+      "tagsNames": [
+        "wall"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2695977445
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 2,
+      "manaRegen": 0,
+      "maxLife": 150,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2327214785": {
+      "id": 2327214785,
+      "name": "rock 21",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2358554770": {
+      "id": 2358554770,
+      "name": "slug",
+      "type": 4,
+      "tags": [
+        15
+      ],
+      "tagsNames": [
+        "siege"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2877307972,
+        3090510364
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 35,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 5,
+      "damageTypeName": "antimatter",
+      "dps": 8.81,
+      "dpsAtLowLife": 4.405,
+      "fireRange": 40,
+      "rateOfFire": 0.5,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25
+      }
+    },
+    "2368457160": {
+      "id": 2368457160,
+      "name": "crysthide",
+      "type": 4,
+      "tags": [
+        19
+      ],
+      "tagsNames": [
+        "tank"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2489744908,
+        3133297167
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 2,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 100,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 1.82,
+      "dpsAtLowLife": 0.91,
+      "fireRange": 10,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 40,
+        "1": 40,
+        "2": 40
+      }
+    },
+    "2371247863": {
+      "id": 2371247863,
+      "name": "toxiloon",
+      "type": 4,
+      "tags": [
+        0,
+        1,
+        2
+      ],
+      "tagsNames": [
+        "ambush",
+        "splash",
+        "suicidal"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2489744908,
+        2700802154
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": true,
+      "explodesWhenKilled": true,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0,
+      "dpsAtLowLife": 0,
+      "fireRange": 15,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "explosionDamageType": 3,
+      "explosionDamageTypeName": "corrosive",
+      "explosionDamage": 6.34,
+      "explosionRadius": 55,
+      "explosionFractionAtEdge": 0.7,
+      "explosionFractionToFriendly": 0,
+      "speeds": {
+        "0": 40,
+        "1": 40,
+        "2": 40,
+        "3": 40,
+        "4": 40
+      }
+    },
+    "2390715978": {
+      "id": 2390715978,
+      "name": "lasher",
+      "type": 4,
+      "tags": [
+        0
+      ],
+      "tagsNames": [
+        "ambush"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3099207394,
+        3677039611
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 40,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 2.05,
+      "dpsAtLowLife": 1.025,
+      "fireRange": 80,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25,
+        "4": 20
+      }
+    },
+    "2474674963": {
+      "id": 2474674963,
+      "name": "fabricator",
+      "type": 4,
+      "tags": [
+        11
+      ],
+      "tagsNames": [
+        "research"
+      ],
+      "recipes": [
+        2258394140
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2476391876": {
+      "id": 2476391876,
+      "name": "greek column bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "2493537238": {
+      "id": 2493537238,
+      "name": "yatag",
+      "type": 4,
+      "tags": [
+        0,
+        15
+      ],
+      "tagsNames": [
+        "ambush",
+        "siege"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3786199064
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 4,
+      "armorTypeName": "energy_shield",
+      "damageType": 5,
+      "damageTypeName": "antimatter",
+      "dps": 2.63,
+      "dpsAtLowLife": 1.315,
+      "fireRange": 60,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25,
+        "3": 25
+      }
+    },
+    "2513140713": {
+      "id": 2513140713,
+      "name": "big boom boy",
+      "type": 4,
+      "tags": [
+        1,
+        2,
+        18
+      ],
+      "tagsNames": [
+        "splash",
+        "suicidal",
+        "volatile"
+      ],
+      "recipes": [],
+      "upgrades": [
+        4012419562
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": true,
+      "explodesWhenKilled": true,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0,
+      "dpsAtLowLife": 0,
+      "fireRange": 15,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "explosionDamageType": 4,
+      "explosionDamageTypeName": "explosive",
+      "explosionDamage": 20.33,
+      "explosionRadius": 95,
+      "explosionFractionAtEdge": 0.7,
+      "explosionFractionToFriendly": 0.7,
+      "speeds": {
+        "0": 20,
+        "1": 20,
+        "2": 20
+      }
+    },
+    "2535003968": {
+      "id": 2535003968,
+      "name": "aether deposit",
+      "type": 4,
+      "tags": [
+        3
+      ],
+      "tagsNames": [
+        "deposit"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 3,
+      "armorTypeName": "invulnerable",
+      "buildingRadius": 15
+    },
+    "2540238849": {
+      "id": 2540238849,
+      "name": "hound",
+      "type": 4,
+      "tags": [
+        8,
+        17
+      ],
+      "tagsNames": [
+        "harassment",
+        "scout"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2503552048,
+        3133297167
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.52,
+      "dpsAtLowLife": 0.26,
+      "fireRange": 10,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 60,
+        "1": 60,
+        "2": 40
+      }
+    },
+    "2591834996": {
+      "id": 2591834996,
+      "name": "anchor spikes",
+      "type": 4,
+      "tags": [
+        13,
+        21
+      ],
+      "tagsNames": [
+        "navy",
+        "wall"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3099207394
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 100,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 100,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 2.67,
+      "dpsAtLowLife": 1.8690001,
+      "fireRange": 25,
+      "rateOfFire": 3.3333333,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "2595193030": {
+      "id": 2595193030,
+      "name": "stingray",
+      "type": 4,
+      "tags": [
+        10,
+        13
+      ],
+      "tagsNames": [
+        "artillery",
+        "navy"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2936011106,
+        3099207394
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 3.07,
+      "dpsAtLowLife": 1.535,
+      "fireRange": 120,
+      "rateOfFire": 0.5,
+      "shooterElevation": 0.2617994,
+      "targetElevation": 0.7853982,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "4": 20
+      }
+    },
+    "2635045743": {
+      "id": 2635045743,
+      "name": "flagpole tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2645485493": {
+      "id": 2645485493,
+      "name": "tallmouth tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2650889579": {
+      "id": 2650889579,
+      "name": "rock 16",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2662204315": {
+      "id": 2662204315,
+      "name": "azure helicup tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2702889254": {
+      "id": 2702889254,
+      "name": "metal deposit",
+      "type": 4,
+      "tags": [
+        3
+      ],
+      "tagsNames": [
+        "deposit"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 3,
+      "armorTypeName": "invulnerable",
+      "buildingRadius": 15
+    },
+    "2716577361": {
+      "id": 2716577361,
+      "name": "cyclops",
+      "type": 4,
+      "tags": [
+        9,
+        10
+      ],
+      "tagsNames": [
+        "artillery",
+        "assault"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3748555957
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.98,
+      "dpsAtLowLife": 0.49,
+      "fireRange": 100,
+      "rateOfFire": 1,
+      "shooterElevation": 0.5235988,
+      "targetElevation": 0.5235988,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 50,
+        "1": 50,
+        "2": 25
+      }
+    },
+    "2732229024": {
+      "id": 2732229024,
+      "name": "jamcollar tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2752190703": {
+      "id": 2752190703,
+      "name": "lurker",
+      "type": 4,
+      "tags": [
+        0
+      ],
+      "tagsNames": [
+        "ambush"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2181463550
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.47,
+      "dpsAtLowLife": 0.235,
+      "fireRange": 80,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 30,
+        "3": 30
+      }
+    },
+    "2762638410": {
+      "id": 2762638410,
+      "name": "drone",
+      "type": 4,
+      "tags": [
+        0,
+        10
+      ],
+      "tagsNames": [
+        "ambush",
+        "artillery"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2968833248
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 25,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 0,
+      "damageTypeName": "laser",
+      "dps": 2.36,
+      "dpsAtLowLife": 1.18,
+      "fireRange": 100,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25,
+        "3": 25,
+        "4": 25
+      }
+    },
+    "2827848058": {
+      "id": 2827848058,
+      "name": "pipeshroom",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2867524795": {
+      "id": 2867524795,
+      "name": "excavator",
+      "type": 4,
+      "tags": [
+        12
+      ],
+      "tagsNames": [
+        "miner"
+      ],
+      "recipes": [
+        3000128952,
+        3778878457
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "2872270872": {
+      "id": 2872270872,
+      "name": "landmine",
+      "type": 4,
+      "tags": [
+        1,
+        2,
+        7
+      ],
+      "tagsNames": [
+        "splash",
+        "suicidal",
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": true,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 4,
+      "damageTypeName": "explosive",
+      "dps": 8.43,
+      "dpsAtLowLife": 5.901,
+      "fireRange": 80,
+      "rateOfFire": 1,
+      "shooterElevation": 0.2617994,
+      "targetElevation": 0.08726647,
+      "splashRadius": 35,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 5
+    },
+    "2877603597": {
+      "id": 2877603597,
+      "name": "axolotl tank",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "buildingRadius": 5
+    },
+    "2910644843": {
+      "id": 2910644843,
+      "name": "drill",
+      "type": 4,
+      "tags": [
+        12
+      ],
+      "tagsNames": [
+        "miner"
+      ],
+      "recipes": [
+        2337074000,
+        2718646897,
+        3161943147
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "2919412120": {
+      "id": 2919412120,
+      "name": "heimdall",
+      "type": 4,
+      "tags": [
+        7
+      ],
+      "tagsNames": [
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2695977445
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "damageType": 1,
+      "damageTypeName": "plasma",
+      "dps": 1.35,
+      "dpsAtLowLife": 0.945,
+      "fireRange": 300,
+      "rateOfFire": 1.5384616,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "2926372489": {
+      "id": 2926372489,
+      "name": "indigo chalix bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "2937515305": {
+      "id": 2937515305,
+      "name": "deeproot",
+      "type": 4,
+      "tags": [
+        12
+      ],
+      "tagsNames": [
+        "miner"
+      ],
+      "recipes": [
+        3346292416
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 25
+    },
+    "2938392654": {
+      "id": 2938392654,
+      "name": "bagpipes tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2975159631": {
+      "id": 2975159631,
+      "name": "pyramid tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "2982432878": {
+      "id": 2982432878,
+      "name": "rock 6",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 6
+    },
+    "2986435653": {
+      "id": 2986435653,
+      "name": "rock 10",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "2998004020": {
+      "id": 2998004020,
+      "name": "dart trap",
+      "type": 4,
+      "tags": [
+        2,
+        7
+      ],
+      "tagsNames": [
+        "suicidal",
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3677039611
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": true,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 20,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 19.36,
+      "dpsAtLowLife": 13.552,
+      "fireRange": 100,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "3013219346": {
+      "id": 3013219346,
+      "name": "rock 11",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3031814565": {
+      "id": 3031814565,
+      "name": "kitsune",
+      "type": 4,
+      "tags": [
+        8,
+        17
+      ],
+      "tagsNames": [
+        "harassment",
+        "scout"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3215521263
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.11,
+      "dpsAtLowLife": 0.055,
+      "fireRange": 50,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 60,
+        "1": 60,
+        "2": 30
+      }
+    },
+    "3039831041": {
+      "id": 3039831041,
+      "name": "ATV",
+      "type": 4,
+      "tags": [
+        16
+      ],
+      "tagsNames": [
+        "worker"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2485566239
+      ],
+      "vital": false,
+      "cargo": true,
+      "logistics": true,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 30,
+        "3": 15
+      }
+    },
+    "3102111872": {
+      "id": 3102111872,
+      "name": "rock 22",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 7
+    },
+    "3111021103": {
+      "id": 3111021103,
+      "name": "paladin",
+      "type": 4,
+      "tags": [
+        19
+      ],
+      "tagsNames": [
+        "tank"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3120386056
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 150,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 4,
+      "armorTypeName": "energy_shield",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 1.23,
+      "dpsAtLowLife": 0.615,
+      "fireRange": 60,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 30
+      }
+    },
+    "3126591205": {
+      "id": 3126591205,
+      "name": "bots factory",
+      "type": 4,
+      "tags": [
+        22
+      ],
+      "tagsNames": [
+        "production"
+      ],
+      "recipes": [
+        2310285652,
+        2480574658,
+        3084381729,
+        3277593549,
+        3642494399,
+        3826650885
+      ],
+      "upgrades": [
+        2533152356
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "3130129556": {
+      "id": 3130129556,
+      "name": "starsky tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3150619395": {
+      "id": 3150619395,
+      "name": "spring fruit tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3179704639": {
+      "id": 3179704639,
+      "name": "heating tower",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "buildingRadius": 5
+    },
+    "3203286691": {
+      "id": 3203286691,
+      "name": "rock 5",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3216211863": {
+      "id": 3216211863,
+      "name": "jumpscare",
+      "type": 4,
+      "tags": [
+        0
+      ],
+      "tagsNames": [
+        "ambush"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3090510364,
+        3133297167
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.21,
+      "dpsAtLowLife": 0.105,
+      "fireRange": 10,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 45,
+        "1": 45,
+        "2": 25,
+        "3": 25
+      }
+    },
+    "3261759087": {
+      "id": 3261759087,
+      "name": "rock 1",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3270972006": {
+      "id": 3270972006,
+      "name": "brightstripe bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3273942786": {
+      "id": 3273942786,
+      "name": "incubator",
+      "type": 4,
+      "tags": [
+        22
+      ],
+      "tagsNames": [
+        "production"
+      ],
+      "recipes": [
+        2456599743,
+        2803325611,
+        3119130365,
+        3418913756,
+        3614409209,
+        3938546746,
+        4153773183,
+        4199796179
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 25
+    },
+    "3315790777": {
+      "id": 3315790777,
+      "name": "warlord",
+      "type": 4,
+      "tags": [
+        9,
+        10
+      ],
+      "tagsNames": [
+        "artillery",
+        "assault"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3822882227
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 150,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 1,
+      "damageTypeName": "plasma",
+      "dps": 7.67,
+      "dpsAtLowLife": 3.835,
+      "fireRange": 150,
+      "rateOfFire": 2,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 20,
+        "1": 20,
+        "2": 20
+      }
+    },
+    "3318920759": {
+      "id": 3318920759,
+      "name": "air factory",
+      "type": 4,
+      "tags": [
+        22
+      ],
+      "tagsNames": [
+        "production"
+      ],
+      "recipes": [
+        2593148872,
+        2861495354,
+        3145806625
+      ],
+      "upgrades": [
+        2533152356
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "3345781597": {
+      "id": 3345781597,
+      "name": "slitherer",
+      "type": 4,
+      "tags": [
+        9,
+        13
+      ],
+      "tagsNames": [
+        "assault",
+        "navy"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2936011106,
+        3682139188
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 3.65,
+      "dpsAtLowLife": 1.825,
+      "fireRange": 80,
+      "rateOfFire": 1,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "4": 20
+      }
+    },
+    "3349165467": {
+      "id": 3349165467,
+      "name": "cagefruit bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3360801550": {
+      "id": 3360801550,
+      "name": "smelter",
+      "type": 4,
+      "tags": [],
+      "tagsNames": [],
+      "recipes": [
+        3356655882
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "3366566657": {
+      "id": 3366566657,
+      "name": "rock 7",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3375048674": {
+      "id": 3375048674,
+      "name": "billboard 3",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "buildingRadius": 15
+    },
+    "3382372732": {
+      "id": 3382372732,
+      "name": "cup fruit tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3387207155": {
+      "id": 3387207155,
+      "name": "thor",
+      "type": 4,
+      "tags": [
+        7,
+        10
+      ],
+      "tagsNames": [
+        "artillery",
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3671723150
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 75,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "damageType": 0,
+      "damageTypeName": "laser",
+      "dps": 0.068,
+      "dpsAtLowLife": 0.0476,
+      "fireRange": 10000,
+      "rateOfFire": 0.33333334,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "3390419093": {
+      "id": 3390419093,
+      "name": "billboard 2",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "buildingRadius": 15
+    },
+    "3433219053": {
+      "id": 3433219053,
+      "name": "rhino",
+      "type": 4,
+      "tags": [
+        9
+      ],
+      "tagsNames": [
+        "assault"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2503552048,
+        3133297167
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 5,
+      "manaRegen": 0,
+      "maxLife": 100,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 100,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 5.64,
+      "dpsAtLowLife": 2.82,
+      "fireRange": 10,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 60,
+        "1": 60,
+        "2": 60
+      }
+    },
+    "3436909866": {
+      "id": 3436909866,
+      "name": "rock 2",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3438207242": {
+      "id": 3438207242,
+      "name": "gorescythe",
+      "type": 4,
+      "tags": [
+        1,
+        9
+      ],
+      "tagsNames": [
+        "assault",
+        "splash"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3133297167,
+        3682139188
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 40,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 4.32,
+      "dpsAtLowLife": 2.16,
+      "fireRange": 10,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 15,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 40,
+        "1": 40,
+        "2": 40
+      }
+    },
+    "3461838831": {
+      "id": 3461838831,
+      "name": "generator",
+      "type": 4,
+      "tags": [],
+      "tagsNames": [],
+      "recipes": [
+        3169471247
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3462184041": {
+      "id": 3462184041,
+      "name": "rock 14",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3473530076": {
+      "id": 3473530076,
+      "name": "hairytwig",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3490146831": {
+      "id": 3490146831,
+      "name": "helix tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3498655354": {
+      "id": 3498655354,
+      "name": "sunbeam",
+      "type": 4,
+      "tags": [
+        10
+      ],
+      "tagsNames": [
+        "artillery"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3090510364,
+        3677039611
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 100,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 1,
+      "damageTypeName": "plasma",
+      "dps": 1.49,
+      "dpsAtLowLife": 0.745,
+      "fireRange": 200,
+      "rateOfFire": 0.5,
+      "shooterElevation": 0.17453294,
+      "targetElevation": 0.5235988,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25
+      }
+    },
+    "3500346962": {
+      "id": 3500346962,
+      "name": "dart bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3508557995": {
+      "id": 3508557995,
+      "name": "phytomorph",
+      "type": 4,
+      "tags": [
+        22
+      ],
+      "tagsNames": [
+        "production"
+      ],
+      "recipes": [
+        2390669286,
+        2392789056,
+        2484702163,
+        3045899578,
+        3138354199
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 25
+    },
+    "3515278880": {
+      "id": 3515278880,
+      "name": "violet bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3521432948": {
+      "id": 3521432948,
+      "name": "billboard 1",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "buildingRadius": 15
+    },
+    "3524129216": {
+      "id": 3524129216,
+      "name": "rock 4",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3535896808": {
+      "id": 3535896808,
+      "name": "rock 17",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3539165854": {
+      "id": 3539165854,
+      "name": "twinfire",
+      "type": 4,
+      "tags": [
+        1,
+        8
+      ],
+      "tagsNames": [
+        "harassment",
+        "splash"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3943381038
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 4,
+      "damageTypeName": "explosive",
+      "dps": 0.38,
+      "dpsAtLowLife": 0.19,
+      "fireRange": 40,
+      "rateOfFire": 2,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 25,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 60,
+        "1": 60,
+        "2": 30
+      }
+    },
+    "3548724939": {
+      "id": 3548724939,
+      "name": "trifeather tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3555433829": {
+      "id": 3555433829,
+      "name": "windmill bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3584623701": {
+      "id": 3584623701,
+      "name": "bifolia bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3612099239": {
+      "id": 3612099239,
+      "name": "laboratory",
+      "type": 4,
+      "tags": [
+        11
+      ],
+      "tagsNames": [
+        "research"
+      ],
+      "recipes": [
+        2274131202,
+        2540369149,
+        2627929355,
+        2681969300,
+        2920254240,
+        3087410998,
+        3241951448,
+        3378860928,
+        3547321463,
+        3554272845,
+        3581452176,
+        3729561893,
+        3769325846,
+        3844721095,
+        4002099296
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "3659091907": {
+      "id": 3659091907,
+      "name": "spiral trunk tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3661861099": {
+      "id": 3661861099,
+      "name": "wardkin",
+      "type": 4,
+      "tags": [
+        19
+      ],
+      "tagsNames": [
+        "tank"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2877307972,
+        3099207394
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 2,
+      "manaRegen": 0,
+      "maxLife": 100,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 100,
+      "armorType": 4,
+      "armorTypeName": "energy_shield",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 2.85,
+      "dpsAtLowLife": 1.425,
+      "fireRange": 40,
+      "rateOfFire": 1,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25
+      }
+    },
+    "3680778852": {
+      "id": 3680778852,
+      "name": "rock 13",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 7
+    },
+    "3684067127": {
+      "id": 3684067127,
+      "name": "rock 12",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3690332618": {
+      "id": 3690332618,
+      "name": "venomite",
+      "type": 4,
+      "tags": [
+        0
+      ],
+      "tagsNames": [
+        "ambush"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2877307972,
+        3682139188
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 0.39,
+      "dpsAtLowLife": 0.195,
+      "fireRange": 60,
+      "rateOfFire": 1,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 30,
+        "3": 30
+      }
+    },
+    "3692648848": {
+      "id": 3692648848,
+      "name": "overlord",
+      "type": 4,
+      "tags": [
+        0,
+        14
+      ],
+      "tagsNames": [
+        "ambush",
+        "home"
+      ],
+      "recipes": [
+        3757628800
+      ],
+      "upgrades": [
+        2936011106,
+        3682139188
+      ],
+      "vital": true,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": true,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 2,
+      "manaRegen": 0,
+      "maxLife": 150,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 1,
+      "dpsAtLowLife": 1,
+      "fireRange": 130,
+      "rateOfFire": 1,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25,
+        "3": 25
+      }
+    },
+    "3710682310": {
+      "id": 3710682310,
+      "name": "twisted trunk tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3713271430": {
+      "id": 3713271430,
+      "name": "claws stump",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3722995037": {
+      "id": 3722995037,
+      "name": "rock 18",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 6
+    },
+    "3774904817": {
+      "id": 3774904817,
+      "name": "talos",
+      "type": 4,
+      "tags": [
+        7
+      ],
+      "tagsNames": [
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2695977445
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.66,
+      "dpsAtLowLife": 0.462,
+      "fireRange": 200,
+      "rateOfFire": 1,
+      "shooterElevation": 0.17453294,
+      "targetElevation": 0.17453294,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "3778674520": {
+      "id": 3778674520,
+      "name": "tripod",
+      "type": 4,
+      "tags": [
+        10
+      ],
+      "tagsNames": [
+        "artillery"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3515341304
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 0,
+      "damageTypeName": "laser",
+      "dps": 0.39,
+      "dpsAtLowLife": 0.195,
+      "fireRange": 250,
+      "rateOfFire": 1.5384616,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25
+      }
+    },
+    "3782433053": {
+      "id": 3782433053,
+      "name": "mutapod",
+      "type": 4,
+      "tags": [
+        11
+      ],
+      "tagsNames": [
+        "research"
+      ],
+      "recipes": [
+        2183678050,
+        2328332724,
+        2366586508,
+        2380393648,
+        2849799068,
+        2867180002,
+        3055660484,
+        3307151483,
+        3494479338,
+        4142399119
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 25
+    },
+    "3790508815": {
+      "id": 3790508815,
+      "name": "cilia bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3797798415": {
+      "id": 3797798415,
+      "name": "vehicle factory",
+      "type": 4,
+      "tags": [
+        22
+      ],
+      "tagsNames": [
+        "production"
+      ],
+      "recipes": [
+        2274625671,
+        3737383038,
+        3837851582
+      ],
+      "upgrades": [
+        2533152356
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "3802607850": {
+      "id": 3802607850,
+      "name": "rock 24",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "3805195479": {
+      "id": 3805195479,
+      "name": "control core",
+      "type": 4,
+      "tags": [
+        7,
+        14
+      ],
+      "tagsNames": [
+        "home",
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2695977445
+      ],
+      "vital": true,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 150,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 0.5,
+      "dpsAtLowLife": 0.5,
+      "fireRange": 300,
+      "rateOfFire": 1,
+      "shooterElevation": 0.2617994,
+      "targetElevation": 0.2617994,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 25
+    },
+    "3895194009": {
+      "id": 3895194009,
+      "name": "experimental assembler",
+      "type": 4,
+      "tags": [
+        22
+      ],
+      "tagsNames": [
+        "production"
+      ],
+      "recipes": [
+        2975383834,
+        3644059948
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 100,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 35
+    },
+    "3916914827": {
+      "id": 3916914827,
+      "name": "barebark bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3926051584": {
+      "id": 3926051584,
+      "name": "spike wall",
+      "type": 4,
+      "tags": [
+        21
+      ],
+      "tagsNames": [
+        "wall"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3099207394
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 100,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 100,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 2,
+      "damageTypeName": "kinetic",
+      "dps": 2.03,
+      "dpsAtLowLife": 1.421,
+      "fireRange": 25,
+      "rateOfFire": 3.3333333,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "3932576529": {
+      "id": 3932576529,
+      "name": "cartographer tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3939081576": {
+      "id": 3939081576,
+      "name": "potato bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "3941348424": {
+      "id": 3941348424,
+      "name": "anchor bulb",
+      "type": 4,
+      "tags": [
+        1,
+        2,
+        7,
+        13
+      ],
+      "tagsNames": [
+        "navy",
+        "splash",
+        "suicidal",
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2877307972
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": true,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 20,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 10.76,
+      "dpsAtLowLife": 7.532,
+      "fireRange": 70,
+      "rateOfFire": 1,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 25,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "3965671726": {
+      "id": 3965671726,
+      "name": "rock 20",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "3974058854": {
+      "id": 3974058854,
+      "name": "chimney tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "3976181794": {
+      "id": 3976181794,
+      "name": "lotus",
+      "type": 4,
+      "tags": [
+        13,
+        22
+      ],
+      "tagsNames": [
+        "navy",
+        "production"
+      ],
+      "recipes": [
+        2371230526,
+        2932777847,
+        4139472639
+      ],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": true,
+      "emptyNeighbors": true,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 50,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 25
+    },
+    "3984569945": {
+      "id": 3984569945,
+      "name": "oil deposit",
+      "type": 4,
+      "tags": [
+        3
+      ],
+      "tagsNames": [
+        "deposit"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 3,
+      "armorTypeName": "invulnerable",
+      "buildingRadius": 15
+    },
+    "3996180294": {
+      "id": 3996180294,
+      "name": "maggot",
+      "type": 4,
+      "tags": [
+        16
+      ],
+      "tagsNames": [
+        "worker"
+      ],
+      "recipes": [],
+      "upgrades": [
+        3090510364
+      ],
+      "vital": false,
+      "cargo": true,
+      "logistics": true,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 15,
+        "3": 15,
+        "4": 15
+      }
+    },
+    "4054188688": {
+      "id": 4054188688,
+      "name": "blazepup",
+      "type": 4,
+      "tags": [
+        1,
+        9
+      ],
+      "tagsNames": [
+        "assault",
+        "splash"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2503552048,
+        2700802154
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 4,
+      "damageTypeName": "explosive",
+      "dps": 1.02,
+      "dpsAtLowLife": 0.51,
+      "fireRange": 40,
+      "rateOfFire": 2,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 25,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 40,
+        "1": 40,
+        "2": 40
+      }
+    },
+    "4142535605": {
+      "id": 4142535605,
+      "name": "broadleaf bush",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "4159224483": {
+      "id": 4159224483,
+      "name": "glow bulb stump",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "4186525539": {
+      "id": 4186525539,
+      "name": "rock 23",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 25
+    },
+    "4200273006": {
+      "id": 4200273006,
+      "name": "pincer tree",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 5,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 15
+    },
+    "4204074954": {
+      "id": 4204074954,
+      "name": "rock 19",
+      "type": 4,
+      "tags": [
+        4,
+        5
+      ],
+      "tagsNames": [
+        "decoration",
+        "rock"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "4223266838": {
+      "id": 4223266838,
+      "name": "platform",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 10,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "4233696204": {
+      "id": 4233696204,
+      "name": "golem",
+      "type": 4,
+      "tags": [
+        1
+      ],
+      "tagsNames": [
+        "splash"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2271610828
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 35,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 1,
+      "damageTypeName": "plasma",
+      "dps": 1.93,
+      "dpsAtLowLife": 0.965,
+      "fireRange": 60,
+      "rateOfFire": 1,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 35,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 30,
+        "1": 30,
+        "2": 30
+      }
+    },
+    "4248688114": {
+      "id": 4248688114,
+      "name": "gas trap",
+      "type": 4,
+      "tags": [
+        1,
+        2,
+        7
+      ],
+      "tagsNames": [
+        "splash",
+        "suicidal",
+        "tower"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2700802154
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": true,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 20,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "damageType": 3,
+      "damageTypeName": "corrosive",
+      "dps": 4.12,
+      "dpsAtLowLife": 2.8839998,
+      "fireRange": 70,
+      "rateOfFire": 1,
+      "shooterElevation": 0.08726647,
+      "targetElevation": 0.2617994,
+      "splashRadius": 45,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "buildingRadius": 15
+    },
+    "4252647795": {
+      "id": 4252647795,
+      "name": "pearltwig",
+      "type": 4,
+      "tags": [
+        4,
+        6
+      ],
+      "tagsNames": [
+        "decoration",
+        "vegetation"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 2,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 1,
+      "armorTypeName": "biological",
+      "buildingRadius": 5
+    },
+    "4256420274": {
+      "id": 4256420274,
+      "name": "cooling tower 1",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "4284848983": {
+      "id": 4284848983,
+      "name": "cooling tower 2",
+      "type": 4,
+      "tags": [
+        4
+      ],
+      "tagsNames": [
+        "decoration"
+      ],
+      "recipes": [],
+      "upgrades": [],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": false,
+      "excludeFromMilitary": false,
+      "neutralCategory": true,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 0,
+      "manaRegen": 0,
+      "maxLife": 15,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 0,
+      "armorTypeName": "building",
+      "buildingRadius": 15
+    },
+    "4286467124": {
+      "id": 4286467124,
+      "name": "mechlas",
+      "type": 4,
+      "tags": [
+        0,
+        10
+      ],
+      "tagsNames": [
+        "ambush",
+        "artillery"
+      ],
+      "recipes": [],
+      "upgrades": [
+        2489744908,
+        3677039611
+      ],
+      "vital": false,
+      "cargo": false,
+      "logistics": false,
+      "assembler": false,
+      "emptyNeighbors": false,
+      "maximumDistance": true,
+      "excludeFromMilitary": false,
+      "neutralCategory": false,
+      "explodesWhenAttacks": false,
+      "explodesWhenKilled": false,
+      "explodesWhenSelfDestructed": false,
+      "processingSpeed": 1,
+      "lifeRegen": 1,
+      "manaRegen": 0,
+      "maxLife": 30,
+      "maxMana": 0,
+      "startingMana": 0,
+      "regenDelay": 300,
+      "armorType": 2,
+      "armorTypeName": "armor_plates",
+      "damageType": 0,
+      "damageTypeName": "laser",
+      "dps": 0.99,
+      "dpsAtLowLife": 0.495,
+      "fireRange": 150,
+      "rateOfFire": 1.5384616,
+      "shooterElevation": 0,
+      "targetElevation": 0,
+      "splashRadius": 0,
+      "splashFractionAtEdge": 0.7,
+      "splashFractionToFriendly": 0,
+      "speeds": {
+        "0": 25,
+        "1": 25,
+        "2": 25,
+        "3": 25,
+        "4": 25
+      }
+    }
   },
   "Upgrade": {
-    "lurker precision": 2181463550,
-    "golem fires": 2271610828,
-    "atv hull": 2485566239,
-    "evasion": 2489744908,
-    "running": 2503552048,
-    "fabrication": 2533152356,
-    "fortification": 2695977445,
-    "splash": 2700802154,
-    "acid": 2877307972,
-    "aim": 2936011106,
-    "drone rotors": 2968833248,
-    "crawling": 3090510364,
-    "regeneration": 3099207394,
-    "paladin overcharge": 3120386056,
-    "claws": 3133297167,
-    "kitsune evasion": 3215521263,
-    "juggernaut range": 3459078104,
-    "tripod range": 3515341304,
-    "capacitor": 3671723150,
-    "precision": 3677039611,
-    "chitin": 3682139188,
-    "cyclops damage": 3748555957,
-    "yatag siege": 3786199064,
-    "warlord offensive": 3822882227,
-    "twinfire quadfire": 3943381038,
-    "big boom boy servos": 4012419562,
-    "mermaid speed": 4027004013
+    "2181463550": {
+      "id": 2181463550,
+      "name": "lurker precision",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.1,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2271610828": {
+      "id": 2271610828,
+      "name": "golem fires",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.1,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2485566239": {
+      "id": 2485566239,
+      "name": "atv hull",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.1,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2489744908": {
+      "id": 2489744908,
+      "name": "evasion",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.05,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2503552048": {
+      "id": 2503552048,
+      "name": "running",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0.03,
+      "processingSpeed": 0
+    },
+    "2533152356": {
+      "id": 2533152356,
+      "name": "fabrication",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 20,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0.05
+    },
+    "2695977445": {
+      "id": 2695977445,
+      "name": "fortification",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.1,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2700802154": {
+      "id": 2700802154,
+      "name": "splash",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0.03,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2877307972": {
+      "id": 2877307972,
+      "name": "acid",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.05,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2936011106": {
+      "id": 2936011106,
+      "name": "aim",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0.03,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "2968833248": {
+      "id": 2968833248,
+      "name": "drone rotors",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0.05,
+      "processingSpeed": 0
+    },
+    "3090510364": {
+      "id": 3090510364,
+      "name": "crawling",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0.03,
+      "processingSpeed": 0
+    },
+    "3099207394": {
+      "id": 3099207394,
+      "name": "regeneration",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0.05,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3120386056": {
+      "id": 3120386056,
+      "name": "paladin overcharge",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.1,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3133297167": {
+      "id": 3133297167,
+      "name": "claws",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.05,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3215521263": {
+      "id": 3215521263,
+      "name": "kitsune evasion",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.1,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3459078104": {
+      "id": 3459078104,
+      "name": "juggernaut range",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0.05,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3515341304": {
+      "id": 3515341304,
+      "name": "tripod range",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0.05,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3671723150": {
+      "id": 3671723150,
+      "name": "capacitor",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 20,
+      "damage": 0.05,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3677039611": {
+      "id": 3677039611,
+      "name": "precision",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0.03,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3682139188": {
+      "id": 3682139188,
+      "name": "chitin",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.05,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3748555957": {
+      "id": 3748555957,
+      "name": "cyclops damage",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.1,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3786199064": {
+      "id": 3786199064,
+      "name": "yatag siege",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.1,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3822882227": {
+      "id": 3822882227,
+      "name": "warlord offensive",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.05,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0.05,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "3943381038": {
+      "id": 3943381038,
+      "name": "twinfire quadfire",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0.1,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0,
+      "processingSpeed": 0
+    },
+    "4012419562": {
+      "id": 4012419562,
+      "name": "big boom boy servos",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0.05,
+      "processingSpeed": 0
+    },
+    "4027004013": {
+      "id": 4027004013,
+      "name": "mermaid speed",
+      "type": 5,
+      "tags": [],
+      "tagsNames": [],
+      "duration": 3000,
+      "limit": 10,
+      "damage": 0,
+      "shootingRange": 0,
+      "splashRadius": 0,
+      "defense": 0,
+      "regenSpeed": 0,
+      "movementSpeed": 0.05,
+      "processingSpeed": 0
+    }
   },
   "Recipe": {
-    "regeneration": 2183678050,
-    "fabrication": 2258394140,
-    "big boom boy servos": 2274131202,
-    "twinfire": 2274625671,
-    "paladin": 2310285652,
-    "chitin": 2328332724,
-    "oil": 2337074000,
-    "evasion": 2366586508,
-    "slitherer": 2371230526,
-    "running": 2380393648,
-    "hound": 2390669286,
-    "jumpscare": 2392789056,
-    "voidspace block": 2397420686,
-    "slug": 2456599743,
-    "lurker": 2480574658,
-    "venomite": 2484702163,
-    "fortification": 2540369149,
-    "mermaid": 2593148872,
-    "warlord offensive": 2627929355,
-    "golem fires": 2681969300,
-    "aether": 2718646897,
-    "crysthide": 2803325611,
-    "crawling": 2849799068,
-    "ATV": 2861495354,
-    "aim": 2867180002,
-    "juggernaut range": 2920254240,
-    "stingray": 2932777847,
-    "warlord": 2975383834,
-    "ore": 3000128952,
-    "toxiloon": 3045899578,
-    "acid": 3055660484,
-    "tripod": 3084381729,
-    "twinfire quadfire": 3087410998,
-    "sunbeam": 3119130365,
-    "maggot": 3138354199,
-    "drone": 3145806625,
-    "metal": 3346292416,
-    "plasma cell": 3169471247,
-    "drone rotors": 3241951448,
-    "biomass": 3264532017,
-    "juggernaut": 3277593549,
-    "precision": 3307151483,
-    "smelting ore": 3356655882,
-    "yatag siege": 3378860928,
-    "wardkin": 3418913756,
-    "quark foam": 3435470674,
-    "splash": 3494479338,
-    "fuel rods": 3517532115,
-    "kitsune evasion": 3547321463,
-    "cyclops damage": 3554272845,
-    "capacitor": 3559478118,
-    "paladin overcharge": 3581452176,
-    "blazepup": 3614409209,
-    "golem": 3642494399,
-    "big boom boy": 3644059948,
-    "mermaid speed": 3729561893,
-    "kitsune": 3737383038,
-    "seed": 3757628800,
-    "lurker precision": 3769325846,
-    "deep oil": 3778878457,
-    "yatag": 3826650885,
-    "cyclops": 3837851582,
-    "atv hull": 3844721095,
-    "rhino": 3938546746,
-    "tripod range": 4002099296,
-    "lasher": 4139472639,
-    "claws": 4142399119,
-    "gorescythe": 4153773183,
-    "mechlas": 4199796179
+    "2183678050": {
+      "id": 2183678050,
+      "name": "regeneration",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "3099207394": 1
+      },
+      "duration": 600,
+      "placeOver": 3984569945
+    },
+    "2258394140": {
+      "id": 2258394140,
+      "name": "fabrication",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3626035542": 1
+      },
+      "outputs": {
+        "2533152356": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "2274131202": {
+      "id": 2274131202,
+      "name": "big boom boy servos",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "4012419562": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "2274625671": {
+      "id": 2274625671,
+      "name": "twinfire",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 2,
+        "3637378061": 3
+      },
+      "outputs": {
+        "3539165854": 1
+      },
+      "duration": 360,
+      "placeOver": 0
+    },
+    "2310285652": {
+      "id": 2310285652,
+      "name": "paladin",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2595104821": 2,
+        "3637378061": 10
+      },
+      "outputs": {
+        "3111021103": 1
+      },
+      "duration": 1200,
+      "placeOver": 0
+    },
+    "2328332724": {
+      "id": 2328332724,
+      "name": "chitin",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "3682139188": 1
+      },
+      "duration": 600,
+      "placeOver": 3984569945
+    },
+    "2337074000": {
+      "id": 2337074000,
+      "name": "oil",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {},
+      "outputs": {
+        "3626035542": 1
+      },
+      "duration": 60,
+      "placeOver": 3984569945
+    },
+    "2366586508": {
+      "id": 2366586508,
+      "name": "evasion",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "2489744908": 1
+      },
+      "duration": 600,
+      "placeOver": 3984569945
+    },
+    "2371230526": {
+      "id": 2371230526,
+      "name": "slitherer",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 6
+      },
+      "outputs": {
+        "3345781597": 1
+      },
+      "duration": 360,
+      "placeOver": 0
+    },
+    "2380393648": {
+      "id": 2380393648,
+      "name": "running",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "2503552048": 1
+      },
+      "duration": 600,
+      "placeOver": 3984569945
+    },
+    "2390669286": {
+      "id": 2390669286,
+      "name": "hound",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2
+      },
+      "outputs": {
+        "2540238849": 1
+      },
+      "duration": 240,
+      "placeOver": 0
+    },
+    "2392789056": {
+      "id": 2392789056,
+      "name": "jumpscare",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2
+      },
+      "outputs": {
+        "3216211863": 2
+      },
+      "duration": 240,
+      "placeOver": 0
+    },
+    "2397420686": {
+      "id": 2397420686,
+      "name": "voidspace block",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2595104821": 3,
+        "3220812668": 2,
+        "3637378061": 1
+      },
+      "outputs": {
+        "3584159228": 1
+      },
+      "duration": 300,
+      "placeOver": 0
+    },
+    "2456599743": {
+      "id": 2456599743,
+      "name": "slug",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 8,
+        "2951452234": 2
+      },
+      "outputs": {
+        "2358554770": 1
+      },
+      "duration": 800,
+      "placeOver": 0
+    },
+    "2480574658": {
+      "id": 2480574658,
+      "name": "lurker",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 1,
+        "3637378061": 2
+      },
+      "outputs": {
+        "2752190703": 1
+      },
+      "duration": 240,
+      "placeOver": 0
+    },
+    "2484702163": {
+      "id": 2484702163,
+      "name": "venomite",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2
+      },
+      "outputs": {
+        "3690332618": 1
+      },
+      "duration": 240,
+      "placeOver": 0
+    },
+    "2540369149": {
+      "id": 2540369149,
+      "name": "fortification",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "2695977445": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "2593148872": {
+      "id": 2593148872,
+      "name": "mermaid",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 1,
+        "3637378061": 4
+      },
+      "outputs": {
+        "2181255771": 1
+      },
+      "duration": 480,
+      "placeOver": 0
+    },
+    "2627929355": {
+      "id": 2627929355,
+      "name": "warlord offensive",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3822882227": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "2681969300": {
+      "id": 2681969300,
+      "name": "golem fires",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "2271610828": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "2718646897": {
+      "id": 2718646897,
+      "name": "aether",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {},
+      "outputs": {
+        "3005410251": 1
+      },
+      "duration": 60,
+      "placeOver": 2535003968
+    },
+    "2803325611": {
+      "id": 2803325611,
+      "name": "crysthide",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2,
+        "2951452234": 2
+      },
+      "outputs": {
+        "2368457160": 1
+      },
+      "duration": 480,
+      "placeOver": 0
+    },
+    "2849799068": {
+      "id": 2849799068,
+      "name": "crawling",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "3090510364": 1
+      },
+      "duration": 600,
+      "placeOver": 3984569945
+    },
+    "2861495354": {
+      "id": 2861495354,
+      "name": "ATV",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 2
+      },
+      "outputs": {
+        "3039831041": 1
+      },
+      "duration": 240,
+      "placeOver": 0
+    },
+    "2867180002": {
+      "id": 2867180002,
+      "name": "aim",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "2936011106": 1
+      },
+      "duration": 600,
+      "placeOver": 2535003968
+    },
+    "2920254240": {
+      "id": 2920254240,
+      "name": "juggernaut range",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3459078104": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "2932777847": {
+      "id": 2932777847,
+      "name": "stingray",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 12
+      },
+      "outputs": {
+        "2595193030": 1
+      },
+      "duration": 720,
+      "placeOver": 0
+    },
+    "2975383834": {
+      "id": 2975383834,
+      "name": "warlord",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3584159228": 3,
+        "3637378061": 10
+      },
+      "outputs": {
+        "3315790777": 1
+      },
+      "duration": 1800,
+      "placeOver": 0
+    },
+    "3000128952": {
+      "id": 3000128952,
+      "name": "ore",
+      "type": 2,
+      "tags": [
+        23
+      ],
+      "tagsNames": [
+        "nonprogression"
+      ],
+      "inputs": {},
+      "outputs": {
+        "3145327874": 1
+      },
+      "duration": 60,
+      "placeOver": 2702889254
+    },
+    "3045899578": {
+      "id": 3045899578,
+      "name": "toxiloon",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 12
+      },
+      "outputs": {
+        "2371247863": 1
+      },
+      "duration": 720,
+      "placeOver": 0
+    },
+    "3055660484": {
+      "id": 3055660484,
+      "name": "acid",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "2877307972": 1
+      },
+      "duration": 600,
+      "placeOver": 2535003968
+    },
+    "3084381729": {
+      "id": 3084381729,
+      "name": "tripod",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 1,
+        "3637378061": 4
+      },
+      "outputs": {
+        "3778674520": 1
+      },
+      "duration": 480,
+      "placeOver": 0
+    },
+    "3087410998": {
+      "id": 3087410998,
+      "name": "twinfire quadfire",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3943381038": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3119130365": {
+      "id": 3119130365,
+      "name": "sunbeam",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 24,
+        "2951452234": 3
+      },
+      "outputs": {
+        "3498655354": 1
+      },
+      "duration": 1800,
+      "placeOver": 0
+    },
+    "3138354199": {
+      "id": 3138354199,
+      "name": "maggot",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2
+      },
+      "outputs": {
+        "3996180294": 1
+      },
+      "duration": 240,
+      "placeOver": 0
+    },
+    "3145806625": {
+      "id": 3145806625,
+      "name": "drone",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 5,
+        "3637378061": 7
+      },
+      "outputs": {
+        "2762638410": 1
+      },
+      "duration": 840,
+      "placeOver": 0
+    },
+    "3161943147": {
+      "id": 3161943147,
+      "name": "metal",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {},
+      "outputs": {
+        "3637378061": 1
+      },
+      "duration": 60,
+      "placeOver": 2702889254
+    },
+    "3169471247": {
+      "id": 3169471247,
+      "name": "plasma cell",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 1
+      },
+      "outputs": {
+        "2595104821": 1
+      },
+      "duration": 120,
+      "placeOver": 0
+    },
+    "3241951448": {
+      "id": 3241951448,
+      "name": "drone rotors",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "2968833248": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3264532017": {
+      "id": 3264532017,
+      "name": "biomass",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {},
+      "outputs": {
+        "2364352315": 1
+      },
+      "duration": 120,
+      "placeOver": 0
+    },
+    "3277593549": {
+      "id": 3277593549,
+      "name": "juggernaut",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 1,
+        "3637378061": 12
+      },
+      "outputs": {
+        "2187484756": 1
+      },
+      "duration": 1440,
+      "placeOver": 0
+    },
+    "3307151483": {
+      "id": 3307151483,
+      "name": "precision",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "3677039611": 1
+      },
+      "duration": 600,
+      "placeOver": 2535003968
+    },
+    "3346292416": {
+      "id": 3346292416,
+      "name": "metal",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2
+      },
+      "outputs": {
+        "2951452234": 1
+      },
+      "duration": 240,
+      "placeOver": 2702889254
+    },
+    "3356655882": {
+      "id": 3356655882,
+      "name": "smelting ore",
+      "type": 2,
+      "tags": [
+        23
+      ],
+      "tagsNames": [
+        "nonprogression"
+      ],
+      "inputs": {
+        "2595104821": 1,
+        "3145327874": 1
+      },
+      "outputs": {
+        "3637378061": 2
+      },
+      "duration": 60,
+      "placeOver": 0
+    },
+    "3378860928": {
+      "id": 3378860928,
+      "name": "yatag siege",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3786199064": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3418913756": {
+      "id": 3418913756,
+      "name": "wardkin",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 10,
+        "2951452234": 1
+      },
+      "outputs": {
+        "3661861099": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3435470674": {
+      "id": 3435470674,
+      "name": "quark foam",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 2,
+        "3637378061": 1
+      },
+      "outputs": {
+        "3220812668": 1
+      },
+      "duration": 300,
+      "placeOver": 0
+    },
+    "3494479338": {
+      "id": 3494479338,
+      "name": "splash",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "2700802154": 1
+      },
+      "duration": 600,
+      "placeOver": 2535003968
+    },
+    "3517532115": {
+      "id": 3517532115,
+      "name": "fuel rods",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3626035542": 1
+      },
+      "outputs": {
+        "2338948473": 1
+      },
+      "duration": 60,
+      "placeOver": 0
+    },
+    "3547321463": {
+      "id": 3547321463,
+      "name": "kitsune evasion",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3215521263": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3554272845": {
+      "id": 3554272845,
+      "name": "cyclops damage",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3748555957": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3559478118": {
+      "id": 3559478118,
+      "name": "capacitor",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3626035542": 1
+      },
+      "outputs": {
+        "3671723150": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3581452176": {
+      "id": 3581452176,
+      "name": "paladin overcharge",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3120386056": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3614409209": {
+      "id": 3614409209,
+      "name": "blazepup",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 4,
+        "2951452234": 1
+      },
+      "outputs": {
+        "4054188688": 1
+      },
+      "duration": 400,
+      "placeOver": 0
+    },
+    "3642494399": {
+      "id": 3642494399,
+      "name": "golem",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2595104821": 2,
+        "3637378061": 10
+      },
+      "outputs": {
+        "4233696204": 1
+      },
+      "duration": 1200,
+      "placeOver": 0
+    },
+    "3644059948": {
+      "id": 3644059948,
+      "name": "big boom boy",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 10,
+        "3584159228": 1
+      },
+      "outputs": {
+        "2513140713": 1
+      },
+      "duration": 1200,
+      "placeOver": 0
+    },
+    "3729561893": {
+      "id": 3729561893,
+      "name": "mermaid speed",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "4027004013": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3737383038": {
+      "id": 3737383038,
+      "name": "kitsune",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 1
+      },
+      "outputs": {
+        "3031814565": 1
+      },
+      "duration": 120,
+      "placeOver": 0
+    },
+    "3757628800": {
+      "id": 3757628800,
+      "name": "seed",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "2903255714": 1
+      },
+      "duration": 400,
+      "placeOver": 0
+    },
+    "3769325846": {
+      "id": 3769325846,
+      "name": "lurker precision",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "2181463550": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3778878457": {
+      "id": 3778878457,
+      "name": "deep oil",
+      "type": 2,
+      "tags": [
+        23
+      ],
+      "tagsNames": [
+        "nonprogression"
+      ],
+      "inputs": {},
+      "outputs": {
+        "3626035542": 2
+      },
+      "duration": 60,
+      "placeOver": 3984569945
+    },
+    "3826650885": {
+      "id": 3826650885,
+      "name": "yatag",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 2,
+        "3637378061": 3
+      },
+      "outputs": {
+        "2493537238": 1
+      },
+      "duration": 360,
+      "placeOver": 0
+    },
+    "3837851582": {
+      "id": 3837851582,
+      "name": "cyclops",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2595104821": 3,
+        "3637378061": 10
+      },
+      "outputs": {
+        "2716577361": 1
+      },
+      "duration": 1200,
+      "placeOver": 0
+    },
+    "3844721095": {
+      "id": 3844721095,
+      "name": "atv hull",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "2485566239": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "3938546746": {
+      "id": 3938546746,
+      "name": "rhino",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 20,
+        "2951452234": 5
+      },
+      "outputs": {
+        "3433219053": 1
+      },
+      "duration": 2000,
+      "placeOver": 0
+    },
+    "4002099296": {
+      "id": 4002099296,
+      "name": "tripod range",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3005410251": 5
+      },
+      "outputs": {
+        "3515341304": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "4139472639": {
+      "id": 4139472639,
+      "name": "lasher",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 12
+      },
+      "outputs": {
+        "2390715978": 1
+      },
+      "duration": 720,
+      "placeOver": 0
+    },
+    "4142399119": {
+      "id": 4142399119,
+      "name": "claws",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5
+      },
+      "outputs": {
+        "3133297167": 1
+      },
+      "duration": 600,
+      "placeOver": 2535003968
+    },
+    "4153773183": {
+      "id": 4153773183,
+      "name": "gorescythe",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 10,
+        "2951452234": 1
+      },
+      "outputs": {
+        "3438207242": 1
+      },
+      "duration": 600,
+      "placeOver": 0
+    },
+    "4199796179": {
+      "id": 4199796179,
+      "name": "mechlas",
+      "type": 2,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 6,
+        "2951452234": 3
+      },
+      "outputs": {
+        "4286467124": 1
+      },
+      "duration": 720,
+      "placeOver": 0
+    }
   },
   "Construction": {
-    "nutritree": 2231191376,
-    "thor": 2241754794,
-    "anchor spikes": 2290186679,
-    "refinery": 2410646287,
-    "vehicle factory": 2414390040,
-    "control core": 2465602470,
-    "phytomorph": 2495840026,
-    "landmine": 2525792009,
-    "anchor bulb": 2596019919,
-    "air factory": 2652586740,
-    "heimdall": 2702706329,
-    "dart trap": 2776849471,
-    "laboratory": 2840078502,
-    "gas trap": 2869729027,
-    "incubator": 2946492993,
-    "capacitor": 3135758301,
-    "smelter": 3226437573,
-    "spike wall": 3420305925,
-    "fabricator": 3458449634,
-    "generator": 3523924100,
-    "deeproot": 3553738316,
-    "bots factory": 3567213656,
-    "excavator": 3709603756,
-    "experimental assembler": 3868441332,
-    "drill": 3871229408,
-    "nanoforge": 4028254536,
-    "talos": 4028432486,
-    "mutapod": 4111486354,
-    "wall": 4135791219,
-    "lotus": 4196952337
+    "2231191376": {
+      "id": 2231191376,
+      "name": "nutritree",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 5,
+        "2903255714": 1
+      },
+      "output": 2200865023
+    },
+    "2241754794": {
+      "id": 2241754794,
+      "name": "thor",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3584159228": 2,
+        "3637378061": 10
+      },
+      "output": 3387207155
+    },
+    "2290186679": {
+      "id": 2290186679,
+      "name": "anchor spikes",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2,
+        "2951452234": 1
+      },
+      "output": 2591834996
+    },
+    "2410646287": {
+      "id": 2410646287,
+      "name": "refinery",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 10
+      },
+      "output": 2183816954
+    },
+    "2414390040": {
+      "id": 2414390040,
+      "name": "vehicle factory",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 10
+      },
+      "output": 3797798415
+    },
+    "2465602470": {
+      "id": 2465602470,
+      "name": "control core",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 5,
+        "2870293015": 1,
+        "3637378061": 10
+      },
+      "output": 3805195479
+    },
+    "2495840026": {
+      "id": 2495840026,
+      "name": "phytomorph",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 15,
+        "2903255714": 1
+      },
+      "output": 3508557995
+    },
+    "2525792009": {
+      "id": 2525792009,
+      "name": "landmine",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 3
+      },
+      "output": 2872270872
+    },
+    "2596019919": {
+      "id": 2596019919,
+      "name": "anchor bulb",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 3
+      },
+      "output": 3941348424
+    },
+    "2652586740": {
+      "id": 2652586740,
+      "name": "air factory",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 10
+      },
+      "output": 3318920759
+    },
+    "2702706329": {
+      "id": 2702706329,
+      "name": "heimdall",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3220812668": 1,
+        "3637378061": 10
+      },
+      "output": 2919412120
+    },
+    "2776849471": {
+      "id": 2776849471,
+      "name": "dart trap",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 1,
+        "2951452234": 1
+      },
+      "output": 2998004020
+    },
+    "2840078502": {
+      "id": 2840078502,
+      "name": "laboratory",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 5,
+        "3637378061": 5
+      },
+      "output": 3612099239
+    },
+    "2869729027": {
+      "id": 2869729027,
+      "name": "gas trap",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 3
+      },
+      "output": 4248688114
+    },
+    "2946492993": {
+      "id": 2946492993,
+      "name": "incubator",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 15,
+        "2903255714": 1,
+        "2951452234": 1
+      },
+      "output": 3273942786
+    },
+    "3135758301": {
+      "id": 3135758301,
+      "name": "capacitor",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3626035542": 1,
+        "3637378061": 10
+      },
+      "output": 2243472010
+    },
+    "3226437573": {
+      "id": 3226437573,
+      "name": "smelter",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 5,
+        "3637378061": 10
+      },
+      "output": 3360801550
+    },
+    "3420305925": {
+      "id": 3420305925,
+      "name": "spike wall",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 2,
+        "2951452234": 1
+      },
+      "output": 3926051584
+    },
+    "3458449634": {
+      "id": 3458449634,
+      "name": "fabricator",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 1,
+        "3637378061": 5
+      },
+      "output": 2474674963
+    },
+    "3523924100": {
+      "id": 3523924100,
+      "name": "generator",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3220812668": 2,
+        "3637378061": 5
+      },
+      "output": 3461838831
+    },
+    "3553738316": {
+      "id": 3553738316,
+      "name": "deeproot",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 15,
+        "2903255714": 1
+      },
+      "output": 2937515305
+    },
+    "3567213656": {
+      "id": 3567213656,
+      "name": "bots factory",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 10
+      },
+      "output": 3126591205
+    },
+    "3709603756": {
+      "id": 3709603756,
+      "name": "excavator",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3220812668": 2,
+        "3637378061": 10
+      },
+      "output": 2867524795
+    },
+    "3868441332": {
+      "id": 3868441332,
+      "name": "experimental assembler",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3584159228": 2,
+        "3637378061": 25
+      },
+      "output": 3895194009
+    },
+    "3871229408": {
+      "id": 3871229408,
+      "name": "drill",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 5
+      },
+      "output": 2910644843
+    },
+    "4028254536": {
+      "id": 4028254536,
+      "name": "nanoforge",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2338948473": 5,
+        "3637378061": 10
+      },
+      "output": 2260731219
+    },
+    "4028432486": {
+      "id": 4028432486,
+      "name": "talos",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 5
+      },
+      "output": 3774904817
+    },
+    "4111486354": {
+      "id": 4111486354,
+      "name": "mutapod",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 15,
+        "2903255714": 1,
+        "2951452234": 2
+      },
+      "output": 3782433053
+    },
+    "4135791219": {
+      "id": 4135791219,
+      "name": "wall",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "3637378061": 2
+      },
+      "output": 2311675106
+    },
+    "4196952337": {
+      "id": 4196952337,
+      "name": "lotus",
+      "type": 3,
+      "tags": [],
+      "tagsNames": [],
+      "inputs": {
+        "2364352315": 15,
+        "2903255714": 1
+      },
+      "output": 3976181794
+    }
   },
   "Resource": {
-    "fuel rods": 2338948473,
-    "biomass": 2364352315,
-    "plasma cell": 2595104821,
-    "ai shard": 2870293015,
-    "seed": 2903255714,
-    "metal": 3637378061,
-    "aether": 3005410251,
-    "ore": 3145327874,
-    "quark foam": 3220812668,
-    "voidspace block": 3584159228,
-    "oil": 3626035542
+    "2338948473": {
+      "id": 2338948473,
+      "name": "fuel rods",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 5
+    },
+    "2364352315": {
+      "id": 2364352315,
+      "name": "biomass",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 20
+    },
+    "2595104821": {
+      "id": 2595104821,
+      "name": "plasma cell",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 2
+    },
+    "2870293015": {
+      "id": 2870293015,
+      "name": "ai shard",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 2
+    },
+    "2903255714": {
+      "id": 2903255714,
+      "name": "seed",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 10
+    },
+    "2951452234": {
+      "id": 2951452234,
+      "name": "metal",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 10
+    },
+    "3005410251": {
+      "id": 3005410251,
+      "name": "aether",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 100
+    },
+    "3145327874": {
+      "id": 3145327874,
+      "name": "ore",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 100
+    },
+    "3220812668": {
+      "id": 3220812668,
+      "name": "quark foam",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 2
+    },
+    "3584159228": {
+      "id": 3584159228,
+      "name": "voidspace block",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 2
+    },
+    "3626035542": {
+      "id": 3626035542,
+      "name": "oil",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 100
+    },
+    "3637378061": {
+      "id": 3637378061,
+      "name": "metal",
+      "type": 1,
+      "tags": [],
+      "tagsNames": [],
+      "maximumProcessingOutput": 100
+    }
   },
   "Race": {
-    "technocracy": 3867317061,
-    "biomass": 4152033917
+    "3867317061": {
+      "id": 3867317061,
+      "name": "technocracy",
+      "type": 6,
+      "tags": [],
+      "tagsNames": [],
+      "startingProvisions": {
+        "2870293015": 1,
+        "3039831041": 10,
+        "3637378061": 30,
+        "3805195479": 1
+      },
+      "constructions": [
+        2241754794,
+        2410646287,
+        2414390040,
+        2465602470,
+        2525792009,
+        2652586740,
+        2702706329,
+        2840078502,
+        3135758301,
+        3226437573,
+        3458449634,
+        3523924100,
+        3567213656,
+        3709603756,
+        3868441332,
+        3871229408,
+        4028254536,
+        4028432486,
+        4135791219
+      ]
+    },
+    "4152033917": {
+      "id": 4152033917,
+      "name": "biomass",
+      "type": 6,
+      "tags": [],
+      "tagsNames": [],
+      "startingProvisions": {
+        "2200865023": 1,
+        "2364352315": 50,
+        "2903255714": 4,
+        "3692648848": 1,
+        "3996180294": 10
+      },
+      "constructions": [
+        2231191376,
+        2290186679,
+        2495840026,
+        2596019919,
+        2776849471,
+        2869729027,
+        2946492993,
+        3420305925,
+        3553738316,
+        4111486354,
+        4196952337
+      ]
+    }
   }
 }

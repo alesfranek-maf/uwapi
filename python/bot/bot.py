@@ -66,7 +66,7 @@ class Bot:
             return
         self.is_configured = True
         uw_game.log_info("configuration start")
-        uw_game.set_player_name("bot-py")
+        uw_game.set_player_name("Ales")
         uw_game.player_join_force(0)  # create new force
         uw_game.set_force_color(1, 0, 0)
         # uw_game.set_force_race(RACE_ID) # todo

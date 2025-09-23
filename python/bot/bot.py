@@ -1,7 +1,10 @@
 import random
 import time
 from uwapi import *
+import json
 
+with open("bots/prototypes.json") as f:
+    PROTOTYPES = json.load(f)
 
 class Bot:
     is_configured: bool = False
@@ -63,6 +66,7 @@ class Bot:
         uw_game.player_join_force(0)  # create new force
         uw_game.set_force_color(1, 0, 0)
         # uw_game.set_force_race(RACE_ID) # todo
+        uw_game.set_force_race(PROTOTYPES["Race"]["technocracy"])
         if uw_world.is_admin():
             # uw_admin.set_map_selection("planets/tetrahedron.uwmap")
             uw_admin.set_map_selection("special/risk.uwmap")

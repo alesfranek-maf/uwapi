@@ -28,6 +28,13 @@ class Extractor:
         with open("prototypes.md", "w") as f:
             f.write(output)
 
+        import json
+        json_output = {}
+        for type, mapping in types.items():
+            json_output[type.name] = {proto.name: proto_id for proto_id, proto in mapping.items()}
+        with open("prototypes.json", "w") as jf:
+            json.dump(json_output, jf, indent=2)
+
         uw_game.log_info("extraction done")
 
     def run(self):

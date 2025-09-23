@@ -1,0 +1,612 @@
+{
+  "2181255771": {
+    "name": "mermaid",
+    "requirements": [
+      {
+        "id": 2593148872,
+        "name": "mermaid",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 4
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2187484756": {
+    "name": "juggernaut",
+    "requirements": [
+      {
+        "id": 3277593549,
+        "name": "juggernaut",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 12
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2358554770": {
+    "name": "slug",
+    "requirements": [
+      {
+        "id": 2456599743,
+        "name": "slug",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 8
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2368457160": {
+    "name": "crysthide",
+    "requirements": [
+      {
+        "id": 2803325611,
+        "name": "crysthide",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2371247863": {
+    "name": "toxiloon",
+    "requirements": [
+      {
+        "id": 3045899578,
+        "name": "toxiloon",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 12
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2390715978": {
+    "name": "lasher",
+    "requirements": [
+      {
+        "id": 4139472639,
+        "name": "lasher",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 12
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2493537238": {
+    "name": "yatag",
+    "requirements": [
+      {
+        "id": 3826650885,
+        "name": "yatag",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 3
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2513140713": {
+    "name": "big boom boy",
+    "requirements": [
+      {
+        "id": 3644059948,
+        "name": "big boom boy",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 10
+          },
+          {
+            "id": 3584159228,
+            "name": "voidspace block",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2540238849": {
+    "name": "hound",
+    "requirements": [
+      {
+        "id": 2390669286,
+        "name": "hound",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2595193030": {
+    "name": "stingray",
+    "requirements": [
+      {
+        "id": 2932777847,
+        "name": "stingray",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 12
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2716577361": {
+    "name": "cyclops",
+    "requirements": [
+      {
+        "id": 3837851582,
+        "name": "cyclops",
+        "inputs": [
+          {
+            "id": 2595104821,
+            "name": "plasma cell",
+            "count": 3
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2752190703": {
+    "name": "lurker",
+    "requirements": [
+      {
+        "id": 2480574658,
+        "name": "lurker",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2762638410": {
+    "name": "drone",
+    "requirements": [
+      {
+        "id": 3145806625,
+        "name": "drone",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 5
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 7
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3031814565": {
+    "name": "kitsune",
+    "requirements": [
+      {
+        "id": 3737383038,
+        "name": "kitsune",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3039831041": {
+    "name": "ATV",
+    "requirements": [
+      {
+        "id": 2861495354,
+        "name": "ATV",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3111021103": {
+    "name": "paladin",
+    "requirements": [
+      {
+        "id": 2310285652,
+        "name": "paladin",
+        "inputs": [
+          {
+            "id": 2595104821,
+            "name": "plasma cell",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3216211863": {
+    "name": "jumpscare",
+    "requirements": [
+      {
+        "id": 2392789056,
+        "name": "jumpscare",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3315790777": {
+    "name": "warlord",
+    "requirements": [
+      {
+        "id": 2975383834,
+        "name": "warlord",
+        "inputs": [
+          {
+            "id": 3584159228,
+            "name": "voidspace block",
+            "count": 3
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3345781597": {
+    "name": "slitherer",
+    "requirements": [
+      {
+        "id": 2371230526,
+        "name": "slitherer",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 6
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3433219053": {
+    "name": "rhino",
+    "requirements": [
+      {
+        "id": 3938546746,
+        "name": "rhino",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 20
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 5
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3438207242": {
+    "name": "gorescythe",
+    "requirements": [
+      {
+        "id": 4153773183,
+        "name": "gorescythe",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 10
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3498655354": {
+    "name": "sunbeam",
+    "requirements": [
+      {
+        "id": 3119130365,
+        "name": "sunbeam",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 24
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 3
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3539165854": {
+    "name": "twinfire",
+    "requirements": [
+      {
+        "id": 2274625671,
+        "name": "twinfire",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 3
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3661861099": {
+    "name": "wardkin",
+    "requirements": [
+      {
+        "id": 3418913756,
+        "name": "wardkin",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 10
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3690332618": {
+    "name": "venomite",
+    "requirements": [
+      {
+        "id": 2484702163,
+        "name": "venomite",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3778674520": {
+    "name": "tripod",
+    "requirements": [
+      {
+        "id": 3084381729,
+        "name": "tripod",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 4
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3996180294": {
+    "name": "maggot",
+    "requirements": [
+      {
+        "id": 3138354199,
+        "name": "maggot",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "4054188688": {
+    "name": "blazepup",
+    "requirements": [
+      {
+        "id": 3614409209,
+        "name": "blazepup",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 4
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "4233696204": {
+    "name": "golem",
+    "requirements": [
+      {
+        "id": 3642494399,
+        "name": "golem",
+        "inputs": [
+          {
+            "id": 2595104821,
+            "name": "plasma cell",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "4286467124": {
+    "name": "mechlas",
+    "requirements": [
+      {
+        "id": 4199796179,
+        "name": "mechlas",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 6
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 3
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  }
+}

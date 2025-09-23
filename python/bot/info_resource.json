@@ -1,0 +1,197 @@
+{
+  "2338948473": {
+    "name": "fuel rods",
+    "requirements": [
+      {
+        "id": 3517532115,
+        "name": "fuel rods",
+        "inputs": [
+          {
+            "id": 3626035542,
+            "name": "oil",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2364352315": {
+    "name": "biomass",
+    "requirements": [
+      {
+        "id": 3264532017,
+        "name": "biomass",
+        "inputs": [],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2595104821": {
+    "name": "plasma cell",
+    "requirements": [
+      {
+        "id": 3169471247,
+        "name": "plasma cell",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2903255714": {
+    "name": "seed",
+    "requirements": [
+      {
+        "id": 3757628800,
+        "name": "seed",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 5
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "2951452234": {
+    "name": "metal",
+    "requirements": [
+      {
+        "id": 3346292416,
+        "name": "metal",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          }
+        ],
+        "placeOver": 2702889254
+      }
+    ]
+  },
+  "3005410251": {
+    "name": "aether",
+    "requirements": [
+      {
+        "id": 2718646897,
+        "name": "aether",
+        "inputs": [],
+        "placeOver": 2535003968
+      }
+    ]
+  },
+  "3145327874": {
+    "name": "ore",
+    "requirements": [
+      {
+        "id": 3000128952,
+        "name": "ore",
+        "inputs": [],
+        "placeOver": 2702889254
+      }
+    ]
+  },
+  "3220812668": {
+    "name": "quark foam",
+    "requirements": [
+      {
+        "id": 3435470674,
+        "name": "quark foam",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3584159228": {
+    "name": "voidspace block",
+    "requirements": [
+      {
+        "id": 2397420686,
+        "name": "voidspace block",
+        "inputs": [
+          {
+            "id": 2595104821,
+            "name": "plasma cell",
+            "count": 3
+          },
+          {
+            "id": 3220812668,
+            "name": "quark foam",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  },
+  "3626035542": {
+    "name": "oil",
+    "requirements": [
+      {
+        "id": 2337074000,
+        "name": "oil",
+        "inputs": [],
+        "placeOver": 3984569945
+      },
+      {
+        "id": 3778878457,
+        "name": "deep oil",
+        "inputs": [],
+        "placeOver": 3984569945
+      }
+    ]
+  },
+  "3637378061": {
+    "name": "metal",
+    "requirements": [
+      {
+        "id": 3161943147,
+        "name": "metal",
+        "inputs": [],
+        "placeOver": 2702889254
+      },
+      {
+        "id": 3356655882,
+        "name": "smelting ore",
+        "inputs": [
+          {
+            "id": 2595104821,
+            "name": "plasma cell",
+            "count": 1
+          },
+          {
+            "id": 3145327874,
+            "name": "ore",
+            "count": 1
+          }
+        ],
+        "placeOver": 0
+      }
+    ]
+  }
+}

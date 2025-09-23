@@ -1,0 +1,911 @@
+{
+  "2183816954": {
+    "name": "refinery",
+    "requirements": [
+      {
+        "id": 2410646287,
+        "name": "refinery",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3517532115,
+        "name": "fuel rods"
+      }
+    ]
+  },
+  "2200865023": {
+    "name": "nutritree",
+    "requirements": [
+      {
+        "id": 2231191376,
+        "name": "nutritree",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 5
+          },
+          {
+            "id": 2903255714,
+            "name": "seed",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3264532017,
+        "name": "biomass"
+      }
+    ]
+  },
+  "2243472010": {
+    "name": "capacitor",
+    "requirements": [
+      {
+        "id": 3135758301,
+        "name": "capacitor",
+        "inputs": [
+          {
+            "id": 3626035542,
+            "name": "oil",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3559478118,
+        "name": "capacitor"
+      }
+    ]
+  },
+  "2260731219": {
+    "name": "nanoforge",
+    "requirements": [
+      {
+        "id": 4028254536,
+        "name": "nanoforge",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 5
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2397420686,
+        "name": "voidspace block"
+      },
+      {
+        "id": 3435470674,
+        "name": "quark foam"
+      }
+    ]
+  },
+  "2311675106": {
+    "name": "wall",
+    "requirements": [
+      {
+        "id": 4135791219,
+        "name": "wall",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  "2474674963": {
+    "name": "fabricator",
+    "requirements": [
+      {
+        "id": 3458449634,
+        "name": "fabricator",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2258394140,
+        "name": "fabrication"
+      }
+    ]
+  },
+  "2591834996": {
+    "name": "anchor spikes",
+    "requirements": [
+      {
+        "id": 2290186679,
+        "name": "anchor spikes",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "2867524795": {
+    "name": "excavator",
+    "requirements": [
+      {
+        "id": 3709603756,
+        "name": "excavator",
+        "inputs": [
+          {
+            "id": 3220812668,
+            "name": "quark foam",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3000128952,
+        "name": "ore"
+      },
+      {
+        "id": 3778878457,
+        "name": "deep oil"
+      }
+    ]
+  },
+  "2872270872": {
+    "name": "landmine",
+    "requirements": [
+      {
+        "id": 2525792009,
+        "name": "landmine",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 3
+          }
+        ]
+      }
+    ]
+  },
+  "2910644843": {
+    "name": "drill",
+    "requirements": [
+      {
+        "id": 3871229408,
+        "name": "drill",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2337074000,
+        "name": "oil"
+      },
+      {
+        "id": 2718646897,
+        "name": "aether"
+      },
+      {
+        "id": 3161943147,
+        "name": "metal"
+      }
+    ]
+  },
+  "2919412120": {
+    "name": "heimdall",
+    "requirements": [
+      {
+        "id": 2702706329,
+        "name": "heimdall",
+        "inputs": [
+          {
+            "id": 3220812668,
+            "name": "quark foam",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ]
+  },
+  "2937515305": {
+    "name": "deeproot",
+    "requirements": [
+      {
+        "id": 3553738316,
+        "name": "deeproot",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 15
+          },
+          {
+            "id": 2903255714,
+            "name": "seed",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3346292416,
+        "name": "metal"
+      }
+    ]
+  },
+  "2998004020": {
+    "name": "dart trap",
+    "requirements": [
+      {
+        "id": 2776849471,
+        "name": "dart trap",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 1
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "3126591205": {
+    "name": "bots factory",
+    "requirements": [
+      {
+        "id": 3567213656,
+        "name": "bots factory",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2310285652,
+        "name": "paladin"
+      },
+      {
+        "id": 2480574658,
+        "name": "lurker"
+      },
+      {
+        "id": 3084381729,
+        "name": "tripod"
+      },
+      {
+        "id": 3277593549,
+        "name": "juggernaut"
+      },
+      {
+        "id": 3642494399,
+        "name": "golem"
+      },
+      {
+        "id": 3826650885,
+        "name": "yatag"
+      }
+    ]
+  },
+  "3273942786": {
+    "name": "incubator",
+    "requirements": [
+      {
+        "id": 2946492993,
+        "name": "incubator",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 15
+          },
+          {
+            "id": 2903255714,
+            "name": "seed",
+            "count": 1
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2456599743,
+        "name": "slug"
+      },
+      {
+        "id": 2803325611,
+        "name": "crysthide"
+      },
+      {
+        "id": 3119130365,
+        "name": "sunbeam"
+      },
+      {
+        "id": 3418913756,
+        "name": "wardkin"
+      },
+      {
+        "id": 3614409209,
+        "name": "blazepup"
+      },
+      {
+        "id": 3938546746,
+        "name": "rhino"
+      },
+      {
+        "id": 4153773183,
+        "name": "gorescythe"
+      },
+      {
+        "id": 4199796179,
+        "name": "mechlas"
+      }
+    ]
+  },
+  "3318920759": {
+    "name": "air factory",
+    "requirements": [
+      {
+        "id": 2652586740,
+        "name": "air factory",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2593148872,
+        "name": "mermaid"
+      },
+      {
+        "id": 2861495354,
+        "name": "ATV"
+      },
+      {
+        "id": 3145806625,
+        "name": "drone"
+      }
+    ]
+  },
+  "3360801550": {
+    "name": "smelter",
+    "requirements": [
+      {
+        "id": 3226437573,
+        "name": "smelter",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 5
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3356655882,
+        "name": "smelting ore"
+      }
+    ]
+  },
+  "3387207155": {
+    "name": "thor",
+    "requirements": [
+      {
+        "id": 2241754794,
+        "name": "thor",
+        "inputs": [
+          {
+            "id": 3584159228,
+            "name": "voidspace block",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ]
+  },
+  "3461838831": {
+    "name": "generator",
+    "requirements": [
+      {
+        "id": 3523924100,
+        "name": "generator",
+        "inputs": [
+          {
+            "id": 3220812668,
+            "name": "quark foam",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 3169471247,
+        "name": "plasma cell"
+      }
+    ]
+  },
+  "3508557995": {
+    "name": "phytomorph",
+    "requirements": [
+      {
+        "id": 2495840026,
+        "name": "phytomorph",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 15
+          },
+          {
+            "id": 2903255714,
+            "name": "seed",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2390669286,
+        "name": "hound"
+      },
+      {
+        "id": 2392789056,
+        "name": "jumpscare"
+      },
+      {
+        "id": 2484702163,
+        "name": "venomite"
+      },
+      {
+        "id": 3045899578,
+        "name": "toxiloon"
+      },
+      {
+        "id": 3138354199,
+        "name": "maggot"
+      }
+    ]
+  },
+  "3612099239": {
+    "name": "laboratory",
+    "requirements": [
+      {
+        "id": 2840078502,
+        "name": "laboratory",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 5
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2274131202,
+        "name": "big boom boy servos"
+      },
+      {
+        "id": 2540369149,
+        "name": "fortification"
+      },
+      {
+        "id": 2627929355,
+        "name": "warlord offensive"
+      },
+      {
+        "id": 2681969300,
+        "name": "golem fires"
+      },
+      {
+        "id": 2920254240,
+        "name": "juggernaut range"
+      },
+      {
+        "id": 3087410998,
+        "name": "twinfire quadfire"
+      },
+      {
+        "id": 3241951448,
+        "name": "drone rotors"
+      },
+      {
+        "id": 3378860928,
+        "name": "yatag siege"
+      },
+      {
+        "id": 3547321463,
+        "name": "kitsune evasion"
+      },
+      {
+        "id": 3554272845,
+        "name": "cyclops damage"
+      },
+      {
+        "id": 3581452176,
+        "name": "paladin overcharge"
+      },
+      {
+        "id": 3729561893,
+        "name": "mermaid speed"
+      },
+      {
+        "id": 3769325846,
+        "name": "lurker precision"
+      },
+      {
+        "id": 3844721095,
+        "name": "atv hull"
+      },
+      {
+        "id": 4002099296,
+        "name": "tripod range"
+      }
+    ]
+  },
+  "3774904817": {
+    "name": "talos",
+    "requirements": [
+      {
+        "id": 4028432486,
+        "name": "talos",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 5
+          }
+        ]
+      }
+    ]
+  },
+  "3782433053": {
+    "name": "mutapod",
+    "requirements": [
+      {
+        "id": 4111486354,
+        "name": "mutapod",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 15
+          },
+          {
+            "id": 2903255714,
+            "name": "seed",
+            "count": 1
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2183678050,
+        "name": "regeneration"
+      },
+      {
+        "id": 2328332724,
+        "name": "chitin"
+      },
+      {
+        "id": 2366586508,
+        "name": "evasion"
+      },
+      {
+        "id": 2380393648,
+        "name": "running"
+      },
+      {
+        "id": 2849799068,
+        "name": "crawling"
+      },
+      {
+        "id": 2867180002,
+        "name": "aim"
+      },
+      {
+        "id": 3055660484,
+        "name": "acid"
+      },
+      {
+        "id": 3307151483,
+        "name": "precision"
+      },
+      {
+        "id": 3494479338,
+        "name": "splash"
+      },
+      {
+        "id": 4142399119,
+        "name": "claws"
+      }
+    ]
+  },
+  "3797798415": {
+    "name": "vehicle factory",
+    "requirements": [
+      {
+        "id": 2414390040,
+        "name": "vehicle factory",
+        "inputs": [
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2274625671,
+        "name": "twinfire"
+      },
+      {
+        "id": 3737383038,
+        "name": "kitsune"
+      },
+      {
+        "id": 3837851582,
+        "name": "cyclops"
+      }
+    ]
+  },
+  "3805195479": {
+    "name": "control core",
+    "requirements": [
+      {
+        "id": 2465602470,
+        "name": "control core",
+        "inputs": [
+          {
+            "id": 2338948473,
+            "name": "fuel rods",
+            "count": 5
+          },
+          {
+            "id": 2870293015,
+            "name": "ai shard",
+            "count": 1
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 10
+          }
+        ]
+      }
+    ]
+  },
+  "3895194009": {
+    "name": "experimental assembler",
+    "requirements": [
+      {
+        "id": 3868441332,
+        "name": "experimental assembler",
+        "inputs": [
+          {
+            "id": 3584159228,
+            "name": "voidspace block",
+            "count": 2
+          },
+          {
+            "id": 3637378061,
+            "name": "metal",
+            "count": 25
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2975383834,
+        "name": "warlord"
+      },
+      {
+        "id": 3644059948,
+        "name": "big boom boy"
+      }
+    ]
+  },
+  "3926051584": {
+    "name": "spike wall",
+    "requirements": [
+      {
+        "id": 3420305925,
+        "name": "spike wall",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 2
+          },
+          {
+            "id": 2951452234,
+            "name": "metal",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "3941348424": {
+    "name": "anchor bulb",
+    "requirements": [
+      {
+        "id": 2596019919,
+        "name": "anchor bulb",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 3
+          }
+        ]
+      }
+    ]
+  },
+  "3976181794": {
+    "name": "lotus",
+    "requirements": [
+      {
+        "id": 4196952337,
+        "name": "lotus",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 15
+          },
+          {
+            "id": 2903255714,
+            "name": "seed",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "recipes": [
+      {
+        "id": 2371230526,
+        "name": "slitherer"
+      },
+      {
+        "id": 2932777847,
+        "name": "stingray"
+      },
+      {
+        "id": 4139472639,
+        "name": "lasher"
+      }
+    ]
+  },
+  "4248688114": {
+    "name": "gas trap",
+    "requirements": [
+      {
+        "id": 2869729027,
+        "name": "gas trap",
+        "inputs": [
+          {
+            "id": 2364352315,
+            "name": "biomass",
+            "count": 3
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,3 +1,4 @@
+
 import random
 import time
 from uwapi import *
@@ -519,6 +520,95 @@ def get_build_plan_for_unit_name(unit_name: str, qty=1):
     return plan
 
 
+
+def _recipe_outputs(recipe_id: int) -> set[int]:
+    r = PROTOTYPES["Recipe"].get(str(int(recipe_id)))
+    if not r:
+        return set()
+    return {int(x) for x in r.get("outputs", {}).keys()}
+
+
+
+def _recipe_inputs(recipe_id: int) -> set[int]:
+    r = PROTOTYPES["Recipe"].get(str(int(recipe_id)))
+    if not r:
+        return set()
+    return {int(x) for x in r.get("inputs", {}).keys()}
+
+# Returns a dict of input resource id -> quantity for a recipe
+def _recipe_inputs_q(recipe_id: int) -> dict[int, int]:
+    r = PROTOTYPES["Recipe"].get(str(int(recipe_id)))
+    if not r:
+        return {}
+    return {int(k): int(v) for k, v in r.get("inputs", {}).items()}
+
+
+
+def _build_dependency_map(plan: dict) -> dict[tuple[int, int], list[tuple[int, int]]]:
+    """Map each (building,recipe) in plan to a list of (dep_building,dep_recipe) that produce its input resources."""
+    pairs = [(int(b), int(r)) for (b, r) in plan.get("buildings", []) if r is not None]
+    # Map from recipe -> resources it outputs
+    r_out = {r: _recipe_outputs(r) for (_, r) in pairs}
+    # For quick lookup: resource -> list of (b,r) producers
+    res_to_producers: dict[int, list[tuple[int, int]]] = {}
+    for b, r in pairs:
+        for rid in r_out[r]:
+            res_to_producers.setdefault(rid, []).append((b, r))
+    dep_map: dict[tuple[int, int], list[tuple[int, int]]] = {}
+    for b, r in pairs:
+        deps: list[tuple[int, int]] = []
+        for need in _recipe_inputs(r):
+            deps.extend(res_to_producers.get(need, []))
+        # Remove self-deps and duplicates while preserving order
+        seen = set()
+        uniq: list[tuple[int, int]] = []
+        for d in deps:
+            if d == (b, r) or d in seen:
+                continue
+            seen.add(d)
+            uniq.append(d)
+        dep_map[(b, r)] = uniq
+    return dep_map
+
+# Helper: resource -> list of (building, recipe) producers from plan
+def _res_to_producers_from_plan(plan: dict) -> dict[int, list[tuple[int, int]]]:
+    pairs = [(int(b), int(r)) for (b, r) in plan.get("buildings", []) if r is not None]
+    mapping: dict[int, list[tuple[int, int]]] = {}
+    for b, r in pairs:
+        for out_res in _recipe_outputs(r):
+            mapping.setdefault(out_res, []).append((b, r))
+    return mapping
+
+
+
+def _find_anchor_entity_for(bid: int, rid: int, plan: dict):
+    """Return an entity id of an already placed dependency (finished building or active construction),
+    choosing among multiple inputs by the highest required quantity for the target recipe.
+    """
+    rid = int(rid) if rid else 0
+    # If recipe unknown, no preference
+    if rid == 0:
+        return None
+    inputs_q = _recipe_inputs_q(rid)
+    if not inputs_q:
+        return None
+    # Sort required resources by descending quantity
+    res_sorted = sorted(inputs_q.items(), key=lambda kv: kv[1], reverse=True)
+    res_to_producers = _res_to_producers_from_plan(plan)
+    for res_id, _qty in res_sorted:
+        producers = res_to_producers.get(int(res_id), [])
+        for db, dr in producers:
+            # Prefer finished buildings with the dependency's recipe
+            finished = [e for e in get_buildings(recipe_proto=dr).values() if int(e.Proto.proto) == int(db)]
+            if finished:
+                return finished[0].id
+            # Otherwise active constructions of that dependency
+            cpid = _construction_for_building(db)
+            active = list(get_constructions(construction_proto=cpid, recipe_proto=dr).values())
+            if active:
+                return active[0].id
+    return None
+
 def _construction_for_building(building_proto_id: int) -> int:
     """Find the construction prototype that outputs the given building prototype. Returns 0 if not found."""
     bid = int(building_proto_id)
@@ -557,6 +647,7 @@ def execute_build_plan(plan: dict, *, near_base=None, limit_per_building: int = 
     placed, recipes_set, errors = [], [], []
 
     buildings = plan.get("buildings", [])
+    dep_map = _build_dependency_map(plan)
     print(f"execute_build_plan: processing {len(buildings)} buildings from plan")
     for bid, rid in buildings:
         print(f"execute_build_plan: step building={bid}({id2name_unit(bid)}) recipe={rid}({id2name_recipe(rid) if rid else None})")
@@ -566,9 +657,10 @@ def execute_build_plan(plan: dict, *, near_base=None, limit_per_building: int = 
             print(f"execute_build_plan: ERROR {msg}")
             errors.append(msg)
             continue
-        pos = building_ask(cpid, base.id, recipe_proto=int(rid) if rid else 0, limit=limit_per_building)
+        anchor = _find_anchor_entity_for(bid, int(rid) if rid else 0, plan) or base.id
+        pos = building_ask(cpid, anchor, recipe_proto=int(rid) if rid else 0, limit=limit_per_building)
         if pos:
-            placed.append({"construction_proto": cpid, "near": base.id, "pos": pos})
+            placed.append({"construction_proto": cpid, "near": anchor, "pos": pos})
         if rid:
             try:
                 eid = set_recipe_on_any(int(rid), force=MY_FORCE)
@@ -887,18 +979,50 @@ class Bot:
         print("build_buildings: start")
         bases = get_buildings_by_name("control core")
         base = next(iter(bases.values()), None)
-        print(f"build_buildings: base -> {base.id if base else None}")
         if not base:
             print("build_buildings: No base found, aborting")
             return
-        print_constructions()
-        unit = "drone"
+
+        unit = "drone"  # target unit
         plan = get_build_plan_for_unit_name(unit, qty=1)
-        print(
-            f"build_buildings: plan for {unit}: buildings={len(plan.get('buildings', []))} base_resources={len(plan.get('base_resources', {}))}")
-        result = execute_build_plan(plan, near_base=base)
-        print(
-            f"build_buildings: result placed={len(result['placed'])} recipes_set={len(result['recipes_set'])} errors={result['errors']}")
+        if plan.get("error"):
+            print(f"build_buildings: plan error: {plan['error']}")
+            return
+
+        pairs = [(int(b), int(r)) for (b, r) in plan.get("buildings", []) if r is not None]
+        if not pairs:
+            print("build_buildings: no buildings in plan")
+            return
+
+        dep_map = _build_dependency_map(plan)
+
+        # Complexity score: number of dependency layers (basic=0, more complex=higher)
+        memo = {}
+        def depth(pair):
+            if pair in memo:
+                return memo[pair]
+            deps = dep_map.get(pair, [])
+            if not deps:
+                memo[pair] = 0
+                return 0
+            d = 1 + max(depth(p) for p in deps)
+            memo[pair] = d
+            return d
+
+        pairs_sorted = sorted(pairs, key=depth)  # basic first
+
+        # Try to place exactly one construction this tick, starting from the most basic
+        for bid, rid in pairs_sorted:
+            cpid = _construction_for_building(bid)
+            if not cpid:
+                continue
+            anchor = _find_anchor_entity_for(bid, rid, plan) or base.id
+            pos = building_ask(cpid, anchor, recipe_proto=rid, limit=1)
+            if pos:
+                print(f"build_buildings: placed {(bid, rid)} via construction {cpid} near {anchor} at {pos}")
+                break
+        else:
+            print("build_buildings: nothing to place (limits reached or no valid spots)")
 
     def on_update(self, stepping: bool):
         self.configure()

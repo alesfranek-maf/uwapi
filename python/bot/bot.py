@@ -2,13 +2,568 @@ import random
 import time
 from uwapi import *
 import json
+from uwapi.interop import UwPriorityEnum
 
 with open("bot/prototypes.json") as f:
     PROTOTYPES = json.load(f)
-for top_key in PROTOTYPES:
-    PROTOTYPES[top_key] = {int(k): v for k, v in PROTOTYPES[top_key].items()}
 
-# dps > 0, fireRange < 5 <- combat units
+RACE_NAME = "technocracy"
+MY_FORCE = -1
+ATV_PROTO_ID = 3039831041  # Unit "ATV"
+IGNORED_IDS = {
+    3145327874,  # resource: ore
+    3000128952,  # recipe: ore
+    3778878457,  # recipe: deep oil
+    3356655882,  # recipe: smelting ore
+    3709603756,  # construction: excavator
+    2867524795,  # unit: excavator
+    3360801550,  # unit: smelter
+    3226437573,  # construction: smelter
+}
+
+
+def _ignored(x):
+    try:
+        return int(x) in IGNORED_IDS
+    except Exception:
+        return False
+
+
+ID_TO_NAME = {}
+NAME_TO_ID = {}
+for top in ("Upgrade", "Recipe", "Construction", "Resource", "Race", "Unit"):
+    for obj in PROTOTYPES.get(top, {}).values():
+        _id = obj.get("id")
+        _name = obj.get("name")
+        if _id is None or _name is None:
+            continue
+        _id = int(_id)
+        # Disambiguate constructions by suffixing their names
+        if top == "Construction":
+            _name = f"{_name}-construction"
+        ID_TO_NAME[_id] = _name
+        if _name not in NAME_TO_ID:
+            NAME_TO_ID[_name] = _id
+
+
+def get_race_id():
+    for race_id, race_data in PROTOTYPES["Race"].items():
+        if race_data["name"] == RACE_NAME:
+            return race_data["id"]
+    return None
+
+
+RACE = get_race_id()
+
+
+def get_static_buildings(my_race=True):
+    race_data = PROTOTYPES["Race"].get(str(RACE))
+    constructions = PROTOTYPES["Construction"]
+
+    if my_race and race_data:
+        construction_ids = set(race_data["constructions"])
+    else:
+        construction_ids = set(constructions.keys())
+
+    units = PROTOTYPES["Unit"]
+    res = {}
+    for c_id in construction_ids:
+        if _ignored(c_id):
+            continue
+        c = constructions.get(str(c_id))
+        if not c or _ignored(c.get("output")):
+            continue
+        output_id = str(c["output"])
+        unit = units.get(output_id)
+        if unit:
+            res[unit["id"]] = unit
+    return res
+
+
+def id2name(_id):
+    _id = int(_id)
+    return ID_TO_NAME.get(_id)
+
+
+def ids2names(ids_):
+    return {i: id2name(i) for i in ids_}
+
+
+def name2id(name):
+    return NAME_TO_ID.get(name)
+
+
+def names2ids(names):
+    return {n: name2id(n) for n in names}
+
+
+def get_static_combat(my_race=True):
+    units = PROTOTYPES["Unit"]
+    recipes = PROTOTYPES["Recipe"]
+
+    if my_race:
+        buildings = get_static_buildings(my_race=True)
+        recipe_ids = set()
+        for b in buildings.values():
+            for rid in b.get("recipes", []):
+                if _ignored(rid):
+                    continue
+                recipe_ids.add(int(rid))
+    else:
+        recipe_ids = {int(k) for k in recipes.keys() if not _ignored(k)}
+
+    res = {}
+    for rid in recipe_ids:
+        if _ignored(rid):
+            continue
+        r = recipes.get(str(rid))
+        if not r:
+            continue
+        for out_id in r.get("outputs", {}).keys():
+            try:
+                uid = int(out_id)
+            except Exception:
+                continue
+            if _ignored(uid) or uid == ATV_PROTO_ID:
+                continue
+            u = units.get(str(uid))
+            if u:
+                res[u["id"]] = u
+    return res
+
+
+def get_static_resources(my_race=True):
+    resources = PROTOTYPES["Resource"]
+    recipes = PROTOTYPES["Recipe"]
+    if my_race:
+        buildings = get_static_buildings(my_race=True)
+        recipe_ids = set()
+        for b in buildings.values():
+            for rid in b.get("recipes", []):
+                if _ignored(rid):
+                    continue
+                recipe_ids.add(int(rid))
+    else:
+        recipe_ids = {int(k) for k in recipes.keys() if not _ignored(k)}
+    res = {}
+    for rid in recipe_ids:
+        if _ignored(rid):
+            continue
+        r = recipes.get(str(rid))
+        if not r:
+            continue
+        for out_id in r.get("outputs", {}).keys():
+            try:
+                oid = int(out_id)
+            except Exception:
+                continue
+            if _ignored(oid):
+                continue
+            rr = resources.get(str(oid))
+            if rr:
+                res[rr["id"]] = rr
+    return res
+
+
+STATIC_BUILDINGS = get_static_buildings(True)
+STATIC_RESOURCES = get_static_resources(True)
+STATIC_COMBAT = get_static_combat(True)
+ALL_STATIC_BUILDINGS = get_static_buildings(False)
+ALL_STATIC_RESOURCES = get_static_resources(False)
+ALL_STATIC_COMBAT = get_static_combat(False)
+
+
+def get_recipes_for_combat(combat_id, my_race=True):
+    if _ignored(combat_id):
+        return None
+    recipes = PROTOTYPES["Recipe"]
+    if my_race:
+        allowed = {int(rid) for b in get_static_buildings(my_race=True).values() for rid in b.get("recipes", []) if
+                   not _ignored(rid)}
+    else:
+        allowed = {int(k) for k in recipes.keys() if not _ignored(k)}
+    cid = str(int(combat_id))
+    for rid in allowed:
+        if _ignored(rid):
+            continue
+        r = recipes.get(str(rid))
+        if r and cid in r.get("outputs", {}):
+            return r
+    return None
+
+
+def get_buildings_for_recipe(recipe_id, my_race=True):
+    if _ignored(recipe_id):
+        return None
+    units = PROTOTYPES["Unit"]
+    rid = int(recipe_id)
+    search_units = get_static_buildings(my_race=my_race).values() if my_race else units.values()
+    for u in search_units:
+        if _ignored(u.get("id")):
+            continue
+        if any(int(r) == rid for r in u.get("recipes", [])):
+            return u
+    return None
+
+
+def get_building_inputs(building_id):
+    if _ignored(building_id):
+        return {}
+    cons = PROTOTYPES["Construction"]
+    bid = int(building_id)
+    for c in cons.values():
+        try:
+            if _ignored(c.get("id")):
+                continue
+            if int(c.get("output")) == bid:
+                return c.get("inputs", {})
+        except Exception:
+            continue
+    return {}
+
+
+def get_building_for_combat(combat_id, my_race=True):
+    r = get_recipes_for_combat(combat_id, my_race=my_race)
+    if not r:
+        return None
+    return get_buildings_for_recipe(r.get("id"), my_race=my_race)
+
+
+def get_recipe_for_resource(resource_id, my_race=True):
+    if _ignored(resource_id):
+        return None
+    recipes = PROTOTYPES["Recipe"]
+    if my_race:
+        allowed = {int(rid) for b in get_static_buildings(my_race=True).values() for rid in b.get("recipes", []) if
+                   not _ignored(rid)}
+    else:
+        allowed = {int(k) for k in recipes.keys() if not _ignored(k)}
+    rid_str = str(int(resource_id))
+    for rid in allowed:
+        if _ignored(rid):
+            continue
+        r = recipes.get(str(rid))
+        if r and rid_str in r.get("outputs", {}):
+            return r
+    return None
+
+
+def get_resource_producers(resource_id, my_race=True):
+    r = get_recipe_for_resource(resource_id, my_race=my_race)
+    if not r:
+        return {}
+    b = get_buildings_for_recipe(r.get("id"), my_race=my_race)
+    return {b["id"]: b} if b else {}
+
+
+def get_construction_cost(building_id):
+    return get_building_inputs(building_id)
+
+
+def scale_cost(cost_dict, factor):
+    return {int(k): v * factor for k, v in ((int(x), y) for x, y in cost_dict.items())}
+
+
+def merge_costs(*dicts):
+    out = {}
+    for d in dicts:
+        for k, v in d.items():
+            k = int(k)
+            out[k] = out.get(k, 0) + v
+    return out
+
+
+def get_combat_cost(combat_id, qty=1, my_race=True):
+    r = get_recipes_for_combat(combat_id, my_race=my_race)
+    if not r:
+        return {}
+    return scale_cost(r.get("inputs", {}), qty)
+
+
+def get_build_plan_for_combat(combat_id, qty=1, my_race=True):
+    combat_id = int(combat_id)
+    b = get_building_for_combat(combat_id, my_race=my_race)
+    r = get_recipes_for_combat(combat_id, my_race=my_race)
+    if not r or not b:
+        return {"combat_id": combat_id, "combat_name": id2name(combat_id), "error": "missing_building_or_recipe"}
+    building_cost = get_construction_cost(b["id"]) or {}
+    unit_cost = get_combat_cost(combat_id, qty=qty, my_race=my_race)
+    total_cost = merge_costs(scale_cost(building_cost, 1), unit_cost)
+    producers = {}
+    for rid in total_cost.keys():
+        prod = get_resource_producers(rid, my_race=my_race)
+        if prod:
+            producers[rid] = list(prod.keys())[0]
+    return {
+        "combat_id": combat_id,
+        "combat_name": id2name(combat_id),
+        "building_id": b["id"],
+        "building_name": b.get("name"),
+        "recipe_id": r.get("id"),
+        "recipe_name": r.get("name"),
+        "building_cost": {int(k): v for k, v in building_cost.items()},
+        "combat_cost": {int(k): v for k, v in unit_cost.items()},
+        "total_cost": total_cost,
+        "producers": producers,
+    }
+
+
+def print_build_plan_for_combat(combat_id, qty=1, my_race=True):
+    plan = get_build_plan_for_combat(combat_id, qty=qty, my_race=my_race)
+    if plan.get("error"):
+        print(f"No plan: {plan['error']} for {combat_id} ({id2name(combat_id) or '?'})")
+        return
+    print(f"Combat {plan['combat_id']}: {plan['combat_name']}")
+    print(f"  Building: {plan['building_id']} ({plan['building_name']})")
+    print(f"  Recipe: {plan['recipe_id']} ({plan['recipe_name']})")
+    if plan['building_cost']:
+        print("  Build cost:")
+        for rid, q in plan['building_cost'].items():
+            print(f"    - {rid} ({id2name(rid) or '?'}) x{q}")
+    if plan['combat_cost']:
+        print("  Unit cost:")
+        for rid, q in plan['combat_cost'].items():
+            print(f"    - {rid} ({id2name(rid) or '?'}) x{q}")
+    if plan['total_cost']:
+        print("  Total cost:")
+        for rid, q in plan['total_cost'].items():
+            prod = plan['producers'].get(rid)
+            prod_s = f" -> produced by {prod} ({id2name(prod)})" if prod else ""
+            print(f"    - {rid} ({id2name(rid) or '?'}) x{q}{prod_s}")
+
+
+def get_full_plan_recursive(combat_id, qty=1, my_race=True):
+    combat_id = int(combat_id)
+    buildings_recipes = set()  # set of (building_id, recipe_id)
+    base_resources = {}
+    visited_buildings = set()
+
+    def add_building(bid, rid=None):
+        bid = int(bid)
+        if rid is not None:
+            buildings_recipes.add((bid, int(rid)))
+        if bid in visited_buildings:
+            return
+        visited_buildings.add(bid)
+        for rid_inp, q in get_construction_cost(bid).items():
+            _expand_resource(int(rid_inp), int(q), set())
+
+    def add_base_resource(rid, q):
+        rid = int(rid)
+        base_resources[rid] = base_resources.get(rid, 0) + int(q)
+
+    def _expand_resource(rid, q, path):
+        rid = int(rid)
+        if q <= 0:
+            return
+        if rid in path:
+            add_base_resource(rid, q)
+            return
+        r = get_recipe_for_resource(rid, my_race=my_race)
+        if not r:
+            add_base_resource(rid, q)
+            return
+        b = get_buildings_for_recipe(r.get("id"), my_race=my_race)
+        if not b:
+            add_base_resource(rid, q)
+            return
+        add_building(b["id"], r.get("id"))
+        inputs = r.get("inputs", {})
+        new_path = set(path)
+        new_path.add(rid)
+        for in_id, in_qty in inputs.items():
+            _expand_resource(int(in_id), int(in_qty) * q, new_path)
+
+    root_building = get_building_for_combat(combat_id, my_race=my_race)
+    unit_recipe = get_recipes_for_combat(combat_id, my_race=my_race)
+    if root_building:
+        add_building(root_building["id"], unit_recipe.get("id") if unit_recipe else None)
+    if unit_recipe:
+        for rid, q in unit_recipe.get("inputs", {}).items():
+            _expand_resource(int(rid), int(q) * int(qty), set())
+
+    return {
+        "combat_id": combat_id,
+        "combat_name": id2name(combat_id),
+        "root_building_id": root_building["id"] if root_building else None,
+        "root_building_name": root_building.get("name") if root_building else None,
+        "buildings": sorted(list(buildings_recipes)),  # list of (building_id, recipe_id)
+        "base_resources": base_resources,
+    }
+
+
+def print_full_plan_recursive(combat_id, qty=1, my_race=True):
+    plan = get_full_plan_recursive(combat_id, qty=qty, my_race=my_race)
+    print(f"Combat {plan['combat_id']}: {plan['combat_name']}")
+    if plan['root_building_id']:
+        print(f"  Root building: {plan['root_building_id']} ({id2name(plan['root_building_id'])})")
+    if plan['buildings']:
+        print("  Buildings to construct (with recipes):")
+        for bid, rid in plan['buildings']:
+            bname = id2name(bid) or '?'
+            rname = id2name(rid) or '?'
+            print(f"    - {bid}: {bname}  via  {rid}: {rname}")
+    if plan['base_resources']:
+        print("  Base resources required:")
+        for rid, q in sorted(plan['base_resources'].items()):
+            print(f"    - {rid}: {id2name(rid)} x{q}")
+
+
+def get_buildings(force=None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    res = {}
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Unit is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        if int(e.Proto.proto) in STATIC_BUILDINGS:
+            res[e.id] = e
+    return res
+
+
+def get_constructions(force=None, construction_proto: int | None = None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    construction_ids = {int(k) for k in PROTOTYPES["Construction"].keys()}
+    target = int(construction_proto) if construction_proto is not None else None
+    res = {}
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        pid = int(e.Proto.proto)
+        if pid in construction_ids and (target is None or pid == target):
+            res[e.id] = e
+    return res
+
+def get_units(force=None, combat_only=False):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    res = {}
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Unit is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        if combat_only and int(e.Proto.proto) not in STATIC_COMBAT:
+            continue
+        res[e.id] = e
+    return res
+
+
+
+def get_combat(force=None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    return get_units(force=force, combat_only=True)
+
+
+def get_atv(force=None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    res = {}
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Unit is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        if int(e.Proto.proto) == ATV_PROTO_ID:
+            res[e.id] = e
+    return res
+
+
+def find_building_by_id(building_id: int, force=None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    bid = int(building_id)
+    # Search among own entities without restricting to STATIC_BUILDINGS
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Unit is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        if int(e.Proto.proto) == bid:
+            return e
+    # Debug output if not found
+    try:
+        own_proto_ids = sorted({int(x.Proto.proto) for x in uw_world.entities().values()
+                                if x.Owner is not None and x.Unit is not None and x.Proto is not None and x.Owner.force == force})
+    except Exception:
+        own_proto_ids = []
+    uw_game.log_warning(f"find_building_by_id: not found bid={bid} name={id2name(bid)}; own protos={own_proto_ids}")
+    return None
+
+
+def find_building_by_name(name: str, force=None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    bid = name2id(name)
+    if bid is None:
+        # Name not in prototypes; log nearby candidates for debugging
+        sample = sorted([(n, i) for n, i in NAME_TO_ID.items() if isinstance(i, int)])[:50]
+        uw_game.log_warning(f"find_building_by_name: unknown name '{name}'. Example known names: {sample}")
+        return None
+    b = find_building_by_id(bid, force=force)
+    if b is None:
+        uw_game.log_warning(f"find_building_by_name: no owned entity with proto {bid} ({name}) found")
+    return b
+
+
+def buildings_with_recipe(recipe_proto: int, force=None):
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    rid = int(recipe_proto)
+    res = {}
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Unit is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        if int(e.Proto.proto) not in STATIC_BUILDINGS:
+            continue
+        if rid in e.proto().data.get("recipes", []):
+            res[e.id] = e
+    return res
+
+
+
+def place_construction_near(construction_proto: int, near_entity_id: int, recipe_proto: int = 0,
+                            priority: UwPriorityEnum = UwPriorityEnum.Normal):
+    pos = uw_world.find_construction_placement(construction_proto, uw_world.entity(int(near_entity_id)).pos(),
+                                               recipe_proto)
+    if pos == 0:
+        return 0
+    uw_commands.place_construction(construction_proto, pos, 0, recipe_proto, priority)
+    return pos
+
+
+
+def _count_structures_for_construction(construction_proto: int, force=None) -> int:
+    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+    c_proto = PROTOTYPES["Construction"].get(str(int(construction_proto)))
+    if not c_proto:
+        return 0
+    building_proto = int(c_proto.get("output", 0))
+    count = 0
+    for e in uw_world.entities().values():
+        if e.Owner is None or e.Proto is None:
+            continue
+        if e.Owner.force != force:
+            continue
+        p = int(e.Proto.proto)
+        if p == building_proto or p == int(construction_proto):
+            count += 1
+    return count
+
+
+def create_construction_by_id(construction_proto: int, near_entity_id: int, *, recipe_proto: int = 0,
+                              priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 2, force=None):
+    return place_construction_near(construction_proto, near_entity_id, recipe_proto=recipe_proto, priority=priority)
+
+
+def set_recipe_on_any(recipe_proto: int, force=MY_FORCE):
+    rid = int(recipe_proto)
+    for e in buildings_with_recipe(rid, force=force).values():
+        if e.Recipe is None:
+            uw_commands.set_recipe(e.id, rid)
+            return e.id
+    return 0
+
 
 class Bot:
     is_configured: bool = False
@@ -69,13 +624,16 @@ class Bot:
         uw_game.set_player_name("Ales")
         uw_game.player_join_force(0)  # create new force
         uw_game.set_force_color(1, 0, 0)
-        tech_id = next(k for k, v in PROTOTYPES["Race"].items() if v["name"] == "technocracy")
+        tech_id = int(next(k for k, v in PROTOTYPES["Race"].items() if v["name"] == "technocracy"))
         uw_game.set_force_race(tech_id)
         if uw_world.is_admin():
             # uw_admin.set_map_selection("planets/tetrahedron.uwmap")
             uw_admin.set_map_selection("special/risk.uwmap")
             uw_admin.add_ai()
             uw_admin.set_automatic_suggested_camera_focus(True)
+        global MY_FORCE
+        MY_FORCE = uw_world.my_force_id()
+        print(f"{MY_FORCE=}")
         uw_game.log_info("configuration done")
 
     def on_update(self, stepping: bool):
@@ -83,11 +641,41 @@ class Bot:
         if not stepping:
             return
         self.work_step += 1
-        match self.work_step % 10:  # save some cpu cycles by splitting work over multiple steps
-            case 1:
-                self.attack_nearest_enemies()
-            case 5:
-                self.assign_random_recipes()
+        match self.work_step % 10:
+            # case 1:
+            #     self.attack_nearest_enemies()
+            # case 5:
+            #     self.assign_random_recipes()
+            case 0:
+                base = find_building_by_name("control core")
+
+                DRILL_CONSTRUCTION_ID = 3871229408
+                METAL_RECIPE_ID = 3161943147
+
+                # place up to 2 drills near the base (count = finished buildings + active constructions)
+                base = next(e for e in uw_world.entities().values() if e.own() and e.Unit)
+
+                # Determine the building proto produced by the drill construction
+                c_proto = PROTOTYPES["Construction"].get(str(DRILL_CONSTRUCTION_ID))
+                drill_building_proto = int(c_proto.get("output")) if c_proto else 0
+
+                # Count only drills: finished buildings with that proto + active constructions of the drill construction proto
+                finished_drills = [e for e in get_buildings().values() if int(e.Proto.proto) == drill_building_proto]
+                active_constructions = list(get_constructions(construction_proto=DRILL_CONSTRUCTION_ID).values())
+                total = len(finished_drills) + len(active_constructions)
+                remaining = max(0, 2 - total)
+
+                for _ in range(remaining):
+                    pos = create_construction_by_id(DRILL_CONSTRUCTION_ID, base.id, recipe_proto=METAL_RECIPE_ID)
+                    if pos:
+                        uw_game.log_info(f"Placed drill at {pos}")
+                        # Update running counts in case placements succeed in the same tick cycle
+                        total += 1
+                        if total >= 2:
+                            uw_game.log_info("Drill limit reached (2). Skipping further placement.")
+                            break
+                    else:
+                        uw_game.log_warning("No valid placement for drill")
 
     def run(self):
         uw_game.log_info("bot-py start")

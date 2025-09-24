@@ -437,6 +437,7 @@ def get_constructions(force=None, construction_proto: int | None = None):
             res[e.id] = e
     return res
 
+
 def get_units(force=None, combat_only=False):
     force = uw_world.my_force_id() if force in (None, -1) else int(force)
     res = {}
@@ -449,7 +450,6 @@ def get_units(force=None, combat_only=False):
             continue
         res[e.id] = e
     return res
-
 
 
 def get_combat(force=None):
@@ -470,39 +470,24 @@ def get_atv(force=None):
     return res
 
 
-def find_building_by_id(building_id: int, force=None):
+def get_buildings_by_id(building_proto_id: int, force=None):
     force = uw_world.my_force_id() if force in (None, -1) else int(force)
-    bid = int(building_id)
-    # Search among own entities without restricting to STATIC_BUILDINGS
-    for e in uw_world.entities().values():
-        if e.Owner is None or e.Unit is None or e.Proto is None:
+    target_id = int(building_proto_id)
+    res = {}
+    for eid, e in get_buildings(force=force).items():
+        try:
+            if int(e.Proto.proto) == target_id:
+                res[eid] = e
+        except Exception:
             continue
-        if e.Owner.force != force:
-            continue
-        if int(e.Proto.proto) == bid:
-            return e
-    # Debug output if not found
-    try:
-        own_proto_ids = sorted({int(x.Proto.proto) for x in uw_world.entities().values()
-                                if x.Owner is not None and x.Unit is not None and x.Proto is not None and x.Owner.force == force})
-    except Exception:
-        own_proto_ids = []
-    uw_game.log_warning(f"find_building_by_id: not found bid={bid} name={id2name(bid)}; own protos={own_proto_ids}")
-    return None
+    return res
 
 
-def find_building_by_name(name: str, force=None):
-    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+def get_buildings_by_name(name: str, force=None):
     bid = name2id(name)
     if bid is None:
-        # Name not in prototypes; log nearby candidates for debugging
-        sample = sorted([(n, i) for n, i in NAME_TO_ID.items() if isinstance(i, int)])[:50]
-        uw_game.log_warning(f"find_building_by_name: unknown name '{name}'. Example known names: {sample}")
-        return None
-    b = find_building_by_id(bid, force=force)
-    if b is None:
-        uw_game.log_warning(f"find_building_by_name: no owned entity with proto {bid} ({name}) found")
-    return b
+        return {}
+    return get_buildings_by_id(int(bid), force=force)
 
 
 def buildings_with_recipe(recipe_proto: int, force=None):
@@ -521,7 +506,6 @@ def buildings_with_recipe(recipe_proto: int, force=None):
     return res
 
 
-
 def place_construction_near(construction_proto: int, near_entity_id: int, recipe_proto: int = 0,
                             priority: UwPriorityEnum = UwPriorityEnum.Normal):
     pos = uw_world.find_construction_placement(construction_proto, uw_world.entity(int(near_entity_id)).pos(),
@@ -531,6 +515,24 @@ def place_construction_near(construction_proto: int, near_entity_id: int, recipe
     uw_commands.place_construction(construction_proto, pos, 0, recipe_proto, priority)
     return pos
 
+
+def building_ask(construction_proto: int, near_entity_id: int, *, recipe_proto: int = 0,
+                  priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 1):
+    """Attempt to start a construction near an entity, but only if the total number of
+    finished buildings (output of this construction) plus active constructions of this type
+    is below `limit`. Returns placement position or 0 if skipped/failed."""
+    c_proto = PROTOTYPES["Construction"].get(str(int(construction_proto)))
+    if not c_proto:
+        return 0
+    building_proto = int(c_proto.get("output", 0))
+    # Count finished buildings of this proto
+    finished = [e for e in get_buildings().values() if int(e.Proto.proto) == building_proto]
+    # Count active constructions of this construction proto
+    active = list(get_constructions(construction_proto=int(construction_proto)).values())
+    total = len(finished) + len(active)
+    if total >= int(limit):
+        return 0
+    return place_construction_near(construction_proto, near_entity_id, recipe_proto=recipe_proto, priority=priority)
 
 
 def _count_structures_for_construction(construction_proto: int, force=None) -> int:
@@ -551,9 +553,6 @@ def _count_structures_for_construction(construction_proto: int, force=None) -> i
     return count
 
 
-def create_construction_by_id(construction_proto: int, near_entity_id: int, *, recipe_proto: int = 0,
-                              priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 2, force=None):
-    return place_construction_near(construction_proto, near_entity_id, recipe_proto=recipe_proto, priority=priority)
 
 
 def set_recipe_on_any(recipe_proto: int, force=MY_FORCE):
@@ -636,6 +635,24 @@ class Bot:
         print(f"{MY_FORCE=}")
         uw_game.log_info("configuration done")
 
+    def build_buildings(self):
+        bases = get_buildings_by_name("control core")
+        base = next(iter(bases.values()), None)
+        if not base:
+            print("No base found")
+            return
+
+        DRILL_CONSTRUCTION_ID = 3871229408
+        METAL_RECIPE_ID = 3161943147
+
+        for _ in range(2):
+            pos = building_ask(DRILL_CONSTRUCTION_ID, base.id, recipe_proto=METAL_RECIPE_ID, limit=2)
+            if pos:
+                uw_game.log_info(f"Placed drill at {pos}")
+            else:
+                # Either at cap or no valid placement available right now
+                break
+
     def on_update(self, stepping: bool):
         self.configure()
         if not stepping:
@@ -647,35 +664,7 @@ class Bot:
             # case 5:
             #     self.assign_random_recipes()
             case 0:
-                base = find_building_by_name("control core")
-
-                DRILL_CONSTRUCTION_ID = 3871229408
-                METAL_RECIPE_ID = 3161943147
-
-                # place up to 2 drills near the base (count = finished buildings + active constructions)
-                base = next(e for e in uw_world.entities().values() if e.own() and e.Unit)
-
-                # Determine the building proto produced by the drill construction
-                c_proto = PROTOTYPES["Construction"].get(str(DRILL_CONSTRUCTION_ID))
-                drill_building_proto = int(c_proto.get("output")) if c_proto else 0
-
-                # Count only drills: finished buildings with that proto + active constructions of the drill construction proto
-                finished_drills = [e for e in get_buildings().values() if int(e.Proto.proto) == drill_building_proto]
-                active_constructions = list(get_constructions(construction_proto=DRILL_CONSTRUCTION_ID).values())
-                total = len(finished_drills) + len(active_constructions)
-                remaining = max(0, 2 - total)
-
-                for _ in range(remaining):
-                    pos = create_construction_by_id(DRILL_CONSTRUCTION_ID, base.id, recipe_proto=METAL_RECIPE_ID)
-                    if pos:
-                        uw_game.log_info(f"Placed drill at {pos}")
-                        # Update running counts in case placements succeed in the same tick cycle
-                        total += 1
-                        if total >= 2:
-                            uw_game.log_info("Drill limit reached (2). Skipping further placement.")
-                            break
-                    else:
-                        uw_game.log_warning("No valid placement for drill")
+                self.build_buildings()
 
     def run(self):
         uw_game.log_info("bot-py start")

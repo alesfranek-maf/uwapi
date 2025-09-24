@@ -31,6 +31,7 @@ def _ignored(x):
 
 ID_TO_NAME = {}
 NAME_TO_ID = {}
+
 for top in ("Upgrade", "Recipe", "Construction", "Resource", "Race", "Unit"):
     for obj in PROTOTYPES.get(top, {}).values():
         _id = obj.get("id")
@@ -46,6 +47,18 @@ for top in ("Upgrade", "Recipe", "Construction", "Resource", "Race", "Unit"):
         ID_TO_NAME[_id] = _name
         if _name not in NAME_TO_ID:
             NAME_TO_ID[_name] = _id
+
+
+# --- Helper functions for force resolution and entity iteration ---
+def _force(force):
+    return uw_world.my_force_id() if force in (None, -1) else int(force)
+
+
+def _own_entities(force=None):
+    f = _force(force)
+    for e in uw_world.entities().values():
+        if e.Owner is not None and e.Owner.force == f and e.Proto is not None:
+            yield e
 
 
 def get_race_id():
@@ -82,13 +95,55 @@ def get_static_buildings(my_race=True):
     return res
 
 
+def _coerce_int(x):
+    if x is None:
+        return None
+    try:
+        return int(x)
+    except Exception:
+        pass
+    if hasattr(x, 'to_int'):
+        try:
+            return int(x.to_int())
+        except Exception:
+            pass
+    if hasattr(x, 'id'):
+        try:
+            return int(x.id)
+        except Exception:
+            pass
+    if hasattr(x, 'proto'):
+        try:
+            return int(x.proto)
+        except Exception:
+            pass
+    return None
+
+
 def id2name(_id):
-    _id = int(_id)
-    return ID_TO_NAME.get(_id)
+    _iid = _coerce_int(_id)
+    return ID_TO_NAME.get(_iid) if _iid is not None else None
 
 
 def ids2names(ids_):
-    return {i: id2name(i) for i in ids_}
+    out = {}
+    for i in ids_:
+        _iid = _coerce_int(i)
+        out[i if _iid is None else _iid] = ID_TO_NAME.get(_iid) if _iid is not None else None
+    return out
+def recipe_id_of(entity) -> int | None:
+    rc = getattr(entity, 'Recipe', None)
+    if rc is None:
+        return None
+    for attr in ('recipe', 'proto', 'id'):
+        if hasattr(rc, attr):
+            try:
+                return int(getattr(rc, attr))
+            except Exception:
+                pass
+    # Fall back to conversion
+    rid = _coerce_int(rc)
+    return rid
 
 
 def name2id(name):
@@ -470,7 +525,7 @@ def execute_build_plan(plan: dict, *, near_base=None, limit_per_building: int = 
             print(f"execute_build_plan: ERROR {msg}")
             errors.append(msg)
             continue
-        pos = building_ask(cpid, base.id, limit=limit_per_building)
+        pos = building_ask(cpid, base.id, recipe_proto=int(rid) if rid else 0, limit=limit_per_building)
         if pos:
             placed.append({"construction_proto": cpid, "near": base.id, "pos": pos})
         if rid:
@@ -495,42 +550,83 @@ def build_unit_by_name(unit_name: str, qty=1, *, near_base=None, my_race=True) -
     return execute_build_plan(plan, near_base=near_base)
 
 
-def get_buildings(force=None):
-    force = uw_world.my_force_id() if force in (None, -1) else int(force)
-    res = {}
-    for e in uw_world.entities().values():
-        if e.Owner is None or e.Unit is None or e.Proto is None:
-            continue
-        if e.Owner.force != force:
-            continue
-        if int(e.Proto.proto) in STATIC_BUILDINGS:
-            res[e.id] = e
-    return res
 
+def _as_int_id(val):
+    """Helper to coerce recipe or proto fields to int if possible, handling object wrappers."""
+    if val is None:
+        return None
+    try:
+        return int(val)
+    except Exception:
+        pass
+    # Try .to_int() for object wrappers
+    if hasattr(val, "to_int"):
+        try:
+            return int(val.to_int())
+        except Exception:
+            pass
+    return None
 
-def get_constructions(force=None, construction_proto: int | None = None):
-    force = uw_world.my_force_id() if force in (None, -1) else int(force)
-    construction_ids = {int(k) for k in PROTOTYPES["Construction"].keys()}
-    target = int(construction_proto) if construction_proto is not None else None
+def get_buildings(force=None, recipe_proto: int | None = None):
     res = {}
-    for e in uw_world.entities().values():
-        if e.Owner is None or e.Proto is None:
-            continue
-        if e.Owner.force != force:
-            continue
+    rid = int(recipe_proto) if recipe_proto is not None else None
+    for e in _own_entities(force):
         pid = int(e.Proto.proto)
-        if pid in construction_ids and (target is None or pid == target):
+        if pid in STATIC_BUILDINGS:
+            if rid is not None and recipe_id_of(e) != rid:
+                continue
             res[e.id] = e
     return res
+
+
+
+
+def get_constructions(force=None, construction_proto: int | None = None, recipe_proto: int | None = None):
+    target = int(construction_proto) if construction_proto is not None else None
+    rid = int(recipe_proto) if recipe_proto is not None else None
+    construction_ids = {int(k) for k in PROTOTYPES["Construction"].keys()}
+    res = {}
+    for e in _own_entities(force):
+        pid = int(e.Proto.proto)
+        if pid not in construction_ids:
+            continue
+        if target is not None and pid != target:
+            continue
+        if rid is not None and recipe_id_of(e) != rid:
+            continue
+        res[e.id] = e
+    return res
+
+
+# --- Debugging/inspection helpers for constructions ---
+def print_constructions(construction_proto: int | None = None, recipe_proto: int | None = None, *, force=None):
+    """Print a table-like list of active constructions and their recipes.
+    Optional filters: construction_proto (by proto id) and recipe_proto (by recipe id).
+    """
+    cons = get_constructions(force=force, construction_proto=construction_proto, recipe_proto=recipe_proto)
+    if not cons:
+        print("print_constructions: none found")
+        return
+    print("# constructions (id | proto:name | recipe:name)")
+    for eid, e in sorted(cons.items()):
+        pid = int(e.Proto.proto)
+        rid_int = recipe_id_of(e)
+        pname = id2name(pid) or "?"
+        rname = id2name(rid_int) if rid_int is not None else "-"
+        print(f"  {eid} | {pid}:{pname} | {rid_int or 0}:{rname}")
+
+
+def print_constructions_by_name(construction_name: str | None = None, recipe_name: str | None = None, *, force=None):
+    cpid = name2id(construction_name) if construction_name else None
+    rpid = name2id(recipe_name) if recipe_name else None
+    return print_constructions(cpid, rpid, force=force)
+
 
 
 def get_units(force=None, combat_only=False):
-    force = uw_world.my_force_id() if force in (None, -1) else int(force)
     res = {}
-    for e in uw_world.entities().values():
-        if e.Owner is None or e.Unit is None or e.Proto is None:
-            continue
-        if e.Owner.force != force:
+    for e in _own_entities(force):
+        if e.Unit is None:
             continue
         if combat_only and int(e.Proto.proto) not in STATIC_COMBAT:
             continue
@@ -556,66 +652,86 @@ def get_atv(force=None):
     return res
 
 
-def get_buildings_by_id(building_proto_id: int, force=None):
-    force = uw_world.my_force_id() if force in (None, -1) else int(force)
+
+def get_buildings_by_id(building_proto_id: int, *, recipe_proto: int | None = None, force=None):
     target_id = int(building_proto_id)
-    res = {}
-    for eid, e in get_buildings(force=force).items():
-        try:
-            if int(e.Proto.proto) == target_id:
-                res[eid] = e
-        except Exception:
-            continue
-    return res
+    return {eid: e for eid, e in get_buildings(force=force, recipe_proto=recipe_proto).items() if int(e.Proto.proto) == target_id}
 
 
-def get_buildings_by_name(name: str, force=None):
+def get_buildings_by_name(name: str, *, recipe_proto: int | None = None, force=None):
     bid = name2id(name)
     if bid is None:
         return {}
-    return get_buildings_by_id(int(bid), force=force)
+    return get_buildings_by_id(int(bid), recipe_proto=recipe_proto, force=force)
+
 
 
 def buildings_with_recipe(recipe_proto: int, force=None):
-    force = uw_world.my_force_id() if force in (None, -1) else int(force)
     rid = int(recipe_proto)
     res = {}
-    for e in uw_world.entities().values():
-        if e.Owner is None or e.Unit is None or e.Proto is None:
-            continue
-        if e.Owner.force != force:
-            continue
-        if int(e.Proto.proto) not in STATIC_BUILDINGS:
-            continue
-        if rid in e.proto().data.get("recipes", []):
+    for e in _own_entities(force):
+        pid = int(e.Proto.proto)
+        if pid in STATIC_BUILDINGS and rid in e.proto().data.get("recipes", []):
             res[e.id] = e
     return res
 
 
+
+# Helper to validate positions for construction placement
+def _is_valid_position(pos) -> bool:
+    # In some API versions, a valid position is a non-zero integer handle; in others, it can be a struct.
+    # We accept ints > 0, or objects exposing x/y or pos()/to_int().
+    if pos is None:
+        return False
+    if isinstance(pos, (int,)):
+        return pos > 0
+    # objects: try common attributes
+    if hasattr(pos, "x") and hasattr(pos, "y"):
+        return True
+    if hasattr(pos, "to_int"):
+        try:
+            return int(pos.to_int()) > 0
+        except Exception:
+            return False
+    if hasattr(pos, "pos"):
+        try:
+            p2 = pos.pos()
+            return _is_valid_position(p2)
+        except Exception:
+            return False
+    return False
+
+
 def place_construction_near(construction_proto: int, near_entity_id: int, recipe_proto: int = 0,
                             priority: UwPriorityEnum = UwPriorityEnum.Normal):
-    pos = uw_world.find_construction_placement(construction_proto, uw_world.entity(int(near_entity_id)).pos(),
-                                               recipe_proto)
-    if pos == 0:
+    base_pos = uw_world.entity(int(near_entity_id)).pos()
+    pos = uw_world.find_construction_placement(construction_proto, base_pos, recipe_proto)
+    if not _is_valid_position(pos):
+        print(f"place_construction_near: no valid placement (proto={construction_proto}, near={near_entity_id}, recipe={recipe_proto}, got={pos} type={type(pos).__name__})")
         return 0
-    uw_commands.place_construction(construction_proto, pos, 0, recipe_proto, priority)
-    return pos
+    if isinstance(pos, object) and hasattr(pos, "to_int"):
+        try:
+            pos_int = int(pos.to_int())
+        except Exception:
+            pos_int = pos
+    else:
+        pos_int = pos
+    uw_commands.place_construction(construction_proto, pos_int, 0, recipe_proto, priority)
+    return pos_int
 
 
 def building_ask(construction_proto: int, near_entity_id: int, *, recipe_proto: int = 0,
                  priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 1):
-    """Attempt to start a construction near an entity, but only if the total number of
-    finished buildings (output of this construction) plus active constructions of this type
-    is below `limit`. Returns placement position or 0 if skipped/failed."""
-    print(
-        f"building_ask: construction_proto={construction_proto} near_entity_id={near_entity_id} recipe_proto={recipe_proto} limit={limit}")
+    """Attempt to start a construction near an entity when (built with desired recipe) + (under construction with desired recipe) < limit."""
+    print(f"building_ask: construction_proto={construction_proto} near_entity_id={near_entity_id} recipe_proto={recipe_proto} limit={limit}")
     c_proto = PROTOTYPES["Construction"].get(str(int(construction_proto)))
     if not c_proto:
         print("building_ask: ERROR unknown construction proto")
         return 0
     building_proto = int(c_proto.get("output", 0))
-    finished = [e for e in get_buildings().values() if int(e.Proto.proto) == building_proto]
-    active = list(get_constructions(construction_proto=int(construction_proto)).values())
+    # Count buildings of the right proto AND with the desired recipe already set
+    finished = [e for e in get_buildings(recipe_proto=int(recipe_proto) if recipe_proto else None).values() if int(e.Proto.proto) == building_proto]
+    active = list(get_constructions(construction_proto=int(construction_proto), recipe_proto=int(recipe_proto) if recipe_proto else None).values())
     total = len(finished) + len(active)
     print(f"building_ask: building_proto={building_proto} finished={len(finished)} active={len(active)} total={total}")
     if total >= int(limit):
@@ -627,7 +743,6 @@ def building_ask(construction_proto: int, near_entity_id: int, *, recipe_proto: 
     else:
         print("building_ask: no valid placement found")
     return pos
-
 
 def _count_structures_for_construction(construction_proto: int, force=None) -> int:
     force = uw_world.my_force_id() if force in (None, -1) else int(force)
@@ -735,6 +850,7 @@ class Bot:
         if not base:
             print("build_buildings: No base found, aborting")
             return
+        print_constructions()
         unit = "drone"
         plan = get_build_plan_for_unit_name(unit, qty=1)
         print(

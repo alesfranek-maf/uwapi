@@ -29,24 +29,51 @@ def _ignored(x):
         return False
 
 
-ID_TO_NAME = {}
-NAME_TO_ID = {}
+# --- Per-type name/ID maps (no suffix hacks) ---
+ID_TO_NAME_UNIT = {}
+NAME_TO_ID_UNIT = {}
+ID_TO_NAME_CONSTRUCTION = {}
+NAME_TO_ID_CONSTRUCTION = {}
+ID_TO_NAME_RECIPE = {}
+NAME_TO_ID_RECIPE = {}
+ID_TO_NAME_RESOURCE = {}
+NAME_TO_ID_RESOURCE = {}
 
-for top in ("Upgrade", "Recipe", "Construction", "Resource", "Race", "Unit"):
-    for obj in PROTOTYPES.get(top, {}).values():
-        _id = obj.get("id")
-        _name = obj.get("name")
-        if _id is None or _name is None:
-            continue
-        _id = int(_id)
-        # Disambiguate constructions by suffixing their names
-        if top == "Construction":
-            _name = f"{_name}-construction"
-        if top == "Recipe":
-            _name = f"{_name}-recipe"
-        ID_TO_NAME[_id] = _name
-        if _name not in NAME_TO_ID:
-            NAME_TO_ID[_name] = _id
+for obj in PROTOTYPES.get("Unit", {}).values():
+    _id, _name = obj.get("id"), obj.get("name")
+    if _id is None or _name is None:
+        continue
+    _id = int(_id)
+    ID_TO_NAME_UNIT[_id] = _name
+    if _name not in NAME_TO_ID_UNIT:
+        NAME_TO_ID_UNIT[_name] = _id
+
+for obj in PROTOTYPES.get("Construction", {}).values():
+    _id, _name = obj.get("id"), obj.get("name")
+    if _id is None or _name is None:
+        continue
+    _id = int(_id)
+    ID_TO_NAME_CONSTRUCTION[_id] = _name
+    if _name not in NAME_TO_ID_CONSTRUCTION:
+        NAME_TO_ID_CONSTRUCTION[_name] = _id
+
+for obj in PROTOTYPES.get("Recipe", {}).values():
+    _id, _name = obj.get("id"), obj.get("name")
+    if _id is None or _name is None:
+        continue
+    _id = int(_id)
+    ID_TO_NAME_RECIPE[_id] = _name
+    if _name not in NAME_TO_ID_RECIPE:
+        NAME_TO_ID_RECIPE[_name] = _id
+
+for obj in PROTOTYPES.get("Resource", {}).values():
+    _id, _name = obj.get("id"), obj.get("name")
+    if _id is None or _name is None:
+        continue
+    _id = int(_id)
+    ID_TO_NAME_RESOURCE[_id] = _name
+    if _name not in NAME_TO_ID_RESOURCE:
+        NAME_TO_ID_RESOURCE[_name] = _id
 
 
 # --- Helper functions for force resolution and entity iteration ---
@@ -95,63 +122,77 @@ def get_static_buildings(my_race=True):
     return res
 
 
-def _coerce_int(x):
-    if x is None:
-        return None
+# --- Per-type helper functions ---
+def id2name_unit(_id):
     try:
-        return int(x)
+        return ID_TO_NAME_UNIT.get(int(_id))
     except Exception:
-        pass
-    if hasattr(x, 'to_int'):
+        return None
+
+
+def id2name_construction(_id):
+    try:
+        return ID_TO_NAME_CONSTRUCTION.get(int(_id))
+    except Exception:
+        return None
+
+
+def id2name_recipe(_id):
+    try:
+        return ID_TO_NAME_RECIPE.get(int(_id))
+    except Exception:
+        return None
+
+
+def id2name_resource(_id):
+    try:
+        return ID_TO_NAME_RESOURCE.get(int(_id))
+    except Exception:
+        return None
+
+
+# --- recipe_id_of helper ---
+
+def recipe_id_of(entity) -> int | None:
+    rc = getattr(entity, "Recipe", None)
+    if rc is None:
+        return None
+    # Common shapes: component with .recipe / .proto / .id
+    for attr in ("recipe", "proto", "id"):
+        v = getattr(rc, attr, None)
+        if isinstance(v, (int, str)):
+            try:
+                return int(v)
+            except Exception:
+                pass
+    # Direct int/str or wrapper with to_int()
+    if isinstance(rc, (int, str)):
         try:
-            return int(x.to_int())
+            return int(rc)
         except Exception:
-            pass
-    if hasattr(x, 'id'):
+            return None
+    if hasattr(rc, "to_int"):
         try:
-            return int(x.id)
+            return int(rc.to_int())
         except Exception:
-            pass
-    if hasattr(x, 'proto'):
-        try:
-            return int(x.proto)
-        except Exception:
-            pass
+            return None
     return None
 
 
-def id2name(_id):
-    _iid = _coerce_int(_id)
-    return ID_TO_NAME.get(_iid) if _iid is not None else None
+def name2id_unit(name: str):
+    return NAME_TO_ID_UNIT.get(name)
 
 
-def ids2names(ids_):
-    out = {}
-    for i in ids_:
-        _iid = _coerce_int(i)
-        out[i if _iid is None else _iid] = ID_TO_NAME.get(_iid) if _iid is not None else None
-    return out
-def recipe_id_of(entity) -> int | None:
-    rc = getattr(entity, 'Recipe', None)
-    if rc is None:
-        return None
-    for attr in ('recipe', 'proto', 'id'):
-        if hasattr(rc, attr):
-            try:
-                return int(getattr(rc, attr))
-            except Exception:
-                pass
-    # Fall back to conversion
-    rid = _coerce_int(rc)
-    return rid
+def name2id_construction(name: str):
+    return NAME_TO_ID_CONSTRUCTION.get(name)
 
 
-def name2id(name):
-    return NAME_TO_ID.get(name)
+def name2id_recipe(name: str):
+    return NAME_TO_ID_RECIPE.get(name)
 
 
-def names2ids(names):
-    return {n: name2id(n) for n in names}
+def name2id_resource(name: str):
+    return NAME_TO_ID_RESOURCE.get(name)
 
 
 def get_static_combat(my_race=True):
@@ -342,7 +383,7 @@ def get_build_plan_for_combat(combat_id, qty=1, my_race=True):
     b = get_building_for_combat(combat_id, my_race=my_race)
     r = get_recipes_for_combat(combat_id, my_race=my_race)
     if not r or not b:
-        return {"combat_id": combat_id, "combat_name": id2name(combat_id), "error": "missing_building_or_recipe"}
+        return {"combat_id": combat_id, "combat_name": id2name_unit(combat_id), "error": "missing_building_or_recipe"}
     building_cost = get_construction_cost(b["id"]) or {}
     unit_cost = get_combat_cost(combat_id, qty=qty, my_race=my_race)
     total_cost = merge_costs(scale_cost(building_cost, 1), unit_cost)
@@ -353,7 +394,7 @@ def get_build_plan_for_combat(combat_id, qty=1, my_race=True):
             producers[rid] = list(prod.keys())[0]
     return {
         "combat_id": combat_id,
-        "combat_name": id2name(combat_id),
+        "combat_name": id2name_unit(combat_id),
         "building_id": b["id"],
         "building_name": b.get("name"),
         "recipe_id": r.get("id"),
@@ -368,7 +409,7 @@ def get_build_plan_for_combat(combat_id, qty=1, my_race=True):
 def print_build_plan_for_combat(combat_id, qty=1, my_race=True):
     plan = get_build_plan_for_combat(combat_id, qty=qty, my_race=my_race)
     if plan.get("error"):
-        print(f"No plan: {plan['error']} for {combat_id} ({id2name(combat_id) or '?'})")
+        print(f"No plan: {plan['error']} for {combat_id} ({id2name_unit(combat_id) or '?'})")
         return
     print(f"Combat {plan['combat_id']}: {plan['combat_name']}")
     print(f"  Building: {plan['building_id']} ({plan['building_name']})")
@@ -376,17 +417,17 @@ def print_build_plan_for_combat(combat_id, qty=1, my_race=True):
     if plan['building_cost']:
         print("  Build cost:")
         for rid, q in plan['building_cost'].items():
-            print(f"    - {rid} ({id2name(rid) or '?'}) x{q}")
+            print(f"    - {rid} ({id2name_resource(rid) or '?'}) x{q}")
     if plan['combat_cost']:
         print("  Unit cost:")
         for rid, q in plan['combat_cost'].items():
-            print(f"    - {rid} ({id2name(rid) or '?'}) x{q}")
+            print(f"    - {rid} ({id2name_resource(rid) or '?'}) x{q}")
     if plan['total_cost']:
         print("  Total cost:")
         for rid, q in plan['total_cost'].items():
             prod = plan['producers'].get(rid)
-            prod_s = f" -> produced by {prod} ({id2name(prod)})" if prod else ""
-            print(f"    - {rid} ({id2name(rid) or '?'}) x{q}{prod_s}")
+            prod_s = f" -> produced by {prod} ({id2name_unit(prod)})" if prod else ""
+            print(f"    - {rid} ({id2name_resource(rid) or '?'}) x{q}{prod_s}")
 
 
 def get_full_plan_recursive(combat_id, qty=1, my_race=True):
@@ -441,7 +482,7 @@ def get_full_plan_recursive(combat_id, qty=1, my_race=True):
 
     return {
         "combat_id": combat_id,
-        "combat_name": id2name(combat_id),
+        "combat_name": id2name_unit(combat_id),
         "root_building_id": root_building["id"] if root_building else None,
         "root_building_name": root_building.get("name") if root_building else None,
         "buildings": sorted(list(buildings_recipes)),  # list of (building_id, recipe_id)
@@ -453,21 +494,21 @@ def print_full_plan_recursive(combat_id, qty=1, my_race=True):
     plan = get_full_plan_recursive(combat_id, qty=qty, my_race=my_race)
     print(f"Combat {plan['combat_id']}: {plan['combat_name']}")
     if plan['root_building_id']:
-        print(f"  Root building: {plan['root_building_id']} ({id2name(plan['root_building_id'])})")
+        print(f"  Root building: {plan['root_building_id']} ({id2name_unit(plan['root_building_id'])})")
     if plan['buildings']:
         print("  Buildings to construct (with recipes):")
         for bid, rid in plan['buildings']:
-            bname = id2name(bid) or '?'
-            rname = id2name(rid) or '?'
+            bname = id2name_unit(bid)or '?'
+            rname = id2name_recipe(rid) or '?'
             print(f"    - {bid}: {bname}  via  {rid}: {rname}")
     if plan['base_resources']:
         print("  Base resources required:")
         for rid, q in sorted(plan['base_resources'].items()):
-            print(f"    - {rid}: {id2name(rid)} x{q}")
+            print(f"    - {rid}: {id2name_resource(rid)} x{q}")
 
 
 def get_build_plan_for_unit_name(unit_name: str, qty=1):
-    uid = name2id(unit_name)
+    uid = name2id_unit(unit_name)
     print(f"get_build_plan_for_unit_name: unit_name='{unit_name}' -> uid={uid}")
     if uid is None:
         print(f"get_build_plan_for_unit_name: ERROR unknown unit '{unit_name}'")
@@ -518,7 +559,7 @@ def execute_build_plan(plan: dict, *, near_base=None, limit_per_building: int = 
     buildings = plan.get("buildings", [])
     print(f"execute_build_plan: processing {len(buildings)} buildings from plan")
     for bid, rid in buildings:
-        print(f"execute_build_plan: step building={bid}({id2name(bid)}) recipe={rid}({id2name(rid) if rid else None})")
+        print(f"execute_build_plan: step building={bid}({id2name_unit(bid)}) recipe={rid}({id2name_recipe(rid) if rid else None})")
         cpid = _construction_for_building(int(bid))
         if cpid == 0:
             msg = f"no_construction_for_building:{bid}"
@@ -550,7 +591,6 @@ def build_unit_by_name(unit_name: str, qty=1, *, near_base=None, my_race=True) -
     return execute_build_plan(plan, near_base=near_base)
 
 
-
 def _as_int_id(val):
     """Helper to coerce recipe or proto fields to int if possible, handling object wrappers."""
     if val is None:
@@ -567,6 +607,7 @@ def _as_int_id(val):
             pass
     return None
 
+
 def get_buildings(force=None, recipe_proto: int | None = None):
     res = {}
     rid = int(recipe_proto) if recipe_proto is not None else None
@@ -577,8 +618,6 @@ def get_buildings(force=None, recipe_proto: int | None = None):
                 continue
             res[e.id] = e
     return res
-
-
 
 
 def get_constructions(force=None, construction_proto: int | None = None, recipe_proto: int | None = None):
@@ -611,16 +650,15 @@ def print_constructions(construction_proto: int | None = None, recipe_proto: int
     for eid, e in sorted(cons.items()):
         pid = int(e.Proto.proto)
         rid_int = recipe_id_of(e)
-        pname = id2name(pid) or "?"
-        rname = id2name(rid_int) if rid_int is not None else "-"
+        pname = id2name_construction(pid) or "?"
+        rname = id2name_recipe(rid_int) if rid_int is not None else "-"
         print(f"  {eid} | {pid}:{pname} | {rid_int or 0}:{rname}")
 
 
 def print_constructions_by_name(construction_name: str | None = None, recipe_name: str | None = None, *, force=None):
-    cpid = name2id(construction_name) if construction_name else None
-    rpid = name2id(recipe_name) if recipe_name else None
+    cpid = name2id_construction(construction_name) if construction_name else None
+    rpid = name2id_recipe(recipe_name) if recipe_name else None
     return print_constructions(cpid, rpid, force=force)
-
 
 
 def get_units(force=None, combat_only=False):
@@ -652,18 +690,17 @@ def get_atv(force=None):
     return res
 
 
-
 def get_buildings_by_id(building_proto_id: int, *, recipe_proto: int | None = None, force=None):
     target_id = int(building_proto_id)
-    return {eid: e for eid, e in get_buildings(force=force, recipe_proto=recipe_proto).items() if int(e.Proto.proto) == target_id}
+    return {eid: e for eid, e in get_buildings(force=force, recipe_proto=recipe_proto).items() if
+            int(e.Proto.proto) == target_id}
 
 
 def get_buildings_by_name(name: str, *, recipe_proto: int | None = None, force=None):
-    bid = name2id(name)
+    bid = name2id_unit(name)
     if bid is None:
         return {}
     return get_buildings_by_id(int(bid), recipe_proto=recipe_proto, force=force)
-
 
 
 def buildings_with_recipe(recipe_proto: int, force=None):
@@ -674,7 +711,6 @@ def buildings_with_recipe(recipe_proto: int, force=None):
         if pid in STATIC_BUILDINGS and rid in e.proto().data.get("recipes", []):
             res[e.id] = e
     return res
-
 
 
 # Helper to validate positions for construction placement
@@ -707,7 +743,8 @@ def place_construction_near(construction_proto: int, near_entity_id: int, recipe
     base_pos = uw_world.entity(int(near_entity_id)).pos()
     pos = uw_world.find_construction_placement(construction_proto, base_pos, recipe_proto)
     if not _is_valid_position(pos):
-        print(f"place_construction_near: no valid placement (proto={construction_proto}, near={near_entity_id}, recipe={recipe_proto}, got={pos} type={type(pos).__name__})")
+        print(
+            f"place_construction_near: no valid placement (proto={construction_proto}, near={near_entity_id}, recipe={recipe_proto}, got={pos} type={type(pos).__name__})")
         return 0
     if isinstance(pos, object) and hasattr(pos, "to_int"):
         try:
@@ -723,15 +760,18 @@ def place_construction_near(construction_proto: int, near_entity_id: int, recipe
 def building_ask(construction_proto: int, near_entity_id: int, *, recipe_proto: int = 0,
                  priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 1):
     """Attempt to start a construction near an entity when (built with desired recipe) + (under construction with desired recipe) < limit."""
-    print(f"building_ask: construction_proto={construction_proto} near_entity_id={near_entity_id} recipe_proto={recipe_proto} limit={limit}")
+    print(
+        f"building_ask: construction_proto={construction_proto} near_entity_id={near_entity_id} recipe_proto={recipe_proto} limit={limit}")
     c_proto = PROTOTYPES["Construction"].get(str(int(construction_proto)))
     if not c_proto:
         print("building_ask: ERROR unknown construction proto")
         return 0
     building_proto = int(c_proto.get("output", 0))
     # Count buildings of the right proto AND with the desired recipe already set
-    finished = [e for e in get_buildings(recipe_proto=int(recipe_proto) if recipe_proto else None).values() if int(e.Proto.proto) == building_proto]
-    active = list(get_constructions(construction_proto=int(construction_proto), recipe_proto=int(recipe_proto) if recipe_proto else None).values())
+    finished = [e for e in get_buildings(recipe_proto=int(recipe_proto) if recipe_proto else None).values() if
+                int(e.Proto.proto) == building_proto]
+    active = list(get_constructions(construction_proto=int(construction_proto),
+                                    recipe_proto=int(recipe_proto) if recipe_proto else None).values())
     total = len(finished) + len(active)
     print(f"building_ask: building_proto={building_proto} finished={len(finished)} active={len(active)} total={total}")
     if total >= int(limit):
@@ -743,6 +783,7 @@ def building_ask(construction_proto: int, near_entity_id: int, *, recipe_proto: 
     else:
         print("building_ask: no valid placement found")
     return pos
+
 
 def _count_structures_for_construction(construction_proto: int, force=None) -> int:
     force = uw_world.my_force_id() if force in (None, -1) else int(force)

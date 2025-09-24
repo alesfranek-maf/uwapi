@@ -41,6 +41,8 @@ for top in ("Upgrade", "Recipe", "Construction", "Resource", "Race", "Unit"):
         # Disambiguate constructions by suffixing their names
         if top == "Construction":
             _name = f"{_name}-construction"
+        if top == "Recipe":
+            _name = f"{_name}-recipe"
         ID_TO_NAME[_id] = _name
         if _name not in NAME_TO_ID:
             NAME_TO_ID[_name] = _id
@@ -409,6 +411,90 @@ def print_full_plan_recursive(combat_id, qty=1, my_race=True):
             print(f"    - {rid}: {id2name(rid)} x{q}")
 
 
+def get_build_plan_for_unit_name(unit_name: str, qty=1):
+    uid = name2id(unit_name)
+    print(f"get_build_plan_for_unit_name: unit_name='{unit_name}' -> uid={uid}")
+    if uid is None:
+        print(f"get_build_plan_for_unit_name: ERROR unknown unit '{unit_name}'")
+        return {"error": f"unknown_unit_name:{unit_name}"}
+    plan = get_full_plan_recursive(int(uid), qty=qty)
+    print(
+        f"get_build_plan_for_unit_name: plan buildings={len(plan.get('buildings', []))} base_resources={len(plan.get('base_resources', {}))}")
+    return plan
+
+
+def _construction_for_building(building_proto_id: int) -> int:
+    """Find the construction prototype that outputs the given building prototype. Returns 0 if not found."""
+    bid = int(building_proto_id)
+    for c in PROTOTYPES["Construction"].values():
+        try:
+            if int(c.get("output", 0)) == bid:
+                return int(c.get("id"))
+        except Exception:
+            continue
+    return 0
+
+
+def execute_build_plan(plan: dict, *, near_base=None, limit_per_building: int = 1) -> dict:
+    """Execute a plan created by get_full_plan_recursive / get_build_plan_for_unit_name.
+    - Places constructions for each required building (respecting limit_per_building per type).
+    - Sets the specified recipe on any matching built building lacking a recipe.
+    Returns a summary dict with placements and any errors.
+    """
+    if not plan or plan.get("error"):
+        err = plan.get("error") if plan else "empty_plan"
+        print(f"execute_build_plan: ERROR {err}")
+        return {"placed": [], "recipes_set": [], "errors": [err]}
+
+    base = near_base
+    if base is None:
+        bases = get_buildings_by_name("control core")
+        base = next(iter(bases.values()), None)
+        print(f"execute_build_plan: resolved base by name -> {base.id if base else None}")
+        if base is None:
+            base = next((e for e in uw_world.entities().values() if e.own() and e.Unit), None)
+            print(f"execute_build_plan: fallback base -> {base.id if base else None}")
+    if base is None:
+        print("execute_build_plan: ERROR no_base_entity_found")
+        return {"placed": [], "recipes_set": [], "errors": ["no_base_entity_found"]}
+
+    placed, recipes_set, errors = [], [], []
+
+    buildings = plan.get("buildings", [])
+    print(f"execute_build_plan: processing {len(buildings)} buildings from plan")
+    for bid, rid in buildings:
+        print(f"execute_build_plan: step building={bid}({id2name(bid)}) recipe={rid}({id2name(rid) if rid else None})")
+        cpid = _construction_for_building(int(bid))
+        if cpid == 0:
+            msg = f"no_construction_for_building:{bid}"
+            print(f"execute_build_plan: ERROR {msg}")
+            errors.append(msg)
+            continue
+        pos = building_ask(cpid, base.id, limit=limit_per_building)
+        if pos:
+            placed.append({"construction_proto": cpid, "near": base.id, "pos": pos})
+        if rid:
+            try:
+                eid = set_recipe_on_any(int(rid), force=MY_FORCE)
+            except Exception as ex:
+                print(f"execute_build_plan: set_recipe_on_any(force) failed: {ex}; retrying without force")
+                eid = set_recipe_on_any(int(rid))
+            if eid:
+                recipes_set.append({"entity": eid, "recipe": int(rid)})
+                print(f"execute_build_plan: set recipe {rid} on entity {eid}")
+            else:
+                print(f"execute_build_plan: no eligible entity to set recipe {rid}")
+
+    print(f"execute_build_plan: done placed={len(placed)} recipes_set={len(recipes_set)} errors={len(errors)}")
+    return {"placed": placed, "recipes_set": recipes_set, "errors": errors}
+
+
+def build_unit_by_name(unit_name: str, qty=1, *, near_base=None, my_race=True) -> dict:
+    """High level helper: compute plan for the given combat unit name and execute it."""
+    plan = get_build_plan_for_unit_name(unit_name, qty=qty, my_race=my_race)
+    return execute_build_plan(plan, near_base=near_base)
+
+
 def get_buildings(force=None):
     force = uw_world.my_force_id() if force in (None, -1) else int(force)
     res = {}
@@ -517,22 +603,30 @@ def place_construction_near(construction_proto: int, near_entity_id: int, recipe
 
 
 def building_ask(construction_proto: int, near_entity_id: int, *, recipe_proto: int = 0,
-                  priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 1):
+                 priority: UwPriorityEnum = UwPriorityEnum.Normal, limit: int = 1):
     """Attempt to start a construction near an entity, but only if the total number of
     finished buildings (output of this construction) plus active constructions of this type
     is below `limit`. Returns placement position or 0 if skipped/failed."""
+    print(
+        f"building_ask: construction_proto={construction_proto} near_entity_id={near_entity_id} recipe_proto={recipe_proto} limit={limit}")
     c_proto = PROTOTYPES["Construction"].get(str(int(construction_proto)))
     if not c_proto:
+        print("building_ask: ERROR unknown construction proto")
         return 0
     building_proto = int(c_proto.get("output", 0))
-    # Count finished buildings of this proto
     finished = [e for e in get_buildings().values() if int(e.Proto.proto) == building_proto]
-    # Count active constructions of this construction proto
     active = list(get_constructions(construction_proto=int(construction_proto)).values())
     total = len(finished) + len(active)
+    print(f"building_ask: building_proto={building_proto} finished={len(finished)} active={len(active)} total={total}")
     if total >= int(limit):
+        print("building_ask: at limit, skipping placement")
         return 0
-    return place_construction_near(construction_proto, near_entity_id, recipe_proto=recipe_proto, priority=priority)
+    pos = place_construction_near(construction_proto, near_entity_id, recipe_proto=recipe_proto, priority=priority)
+    if pos:
+        print(f"building_ask: placed at pos={pos}")
+    else:
+        print("building_ask: no valid placement found")
+    return pos
 
 
 def _count_structures_for_construction(construction_proto: int, force=None) -> int:
@@ -551,8 +645,6 @@ def _count_structures_for_construction(construction_proto: int, force=None) -> i
         if p == building_proto or p == int(construction_proto):
             count += 1
     return count
-
-
 
 
 def set_recipe_on_any(recipe_proto: int, force=MY_FORCE):
@@ -636,22 +728,20 @@ class Bot:
         uw_game.log_info("configuration done")
 
     def build_buildings(self):
+        print("build_buildings: start")
         bases = get_buildings_by_name("control core")
         base = next(iter(bases.values()), None)
+        print(f"build_buildings: base -> {base.id if base else None}")
         if not base:
-            print("No base found")
+            print("build_buildings: No base found, aborting")
             return
-
-        DRILL_CONSTRUCTION_ID = 3871229408
-        METAL_RECIPE_ID = 3161943147
-
-        for _ in range(2):
-            pos = building_ask(DRILL_CONSTRUCTION_ID, base.id, recipe_proto=METAL_RECIPE_ID, limit=2)
-            if pos:
-                uw_game.log_info(f"Placed drill at {pos}")
-            else:
-                # Either at cap or no valid placement available right now
-                break
+        unit = "drone"
+        plan = get_build_plan_for_unit_name(unit, qty=1)
+        print(
+            f"build_buildings: plan for {unit}: buildings={len(plan.get('buildings', []))} base_resources={len(plan.get('base_resources', {}))}")
+        result = execute_build_plan(plan, near_base=base)
+        print(
+            f"build_buildings: result placed={len(result['placed'])} recipes_set={len(result['recipes_set'])} errors={result['errors']}")
 
     def on_update(self, stepping: bool):
         self.configure()
